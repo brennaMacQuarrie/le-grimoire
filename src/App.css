@@ -59,11 +59,47 @@ button {
   color: white;
   transition: all 0.7s;
 }
-button:hover {
+button:hover,
+button:active {
   background: rgba(255, 255, 255, 0.8);
   color: black;
 }
 
+
+.menu {
+  width: 28%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* transform: translate3d(-100vw, 0, 0);  to move in from left */
+  transition: transform 0.8s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  /* background: rgba(0, 0, 0, 0.7); */
+
+}
+.menu h2 {
+  padding: 5%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+.menu a {
+  width: 90%;
+  padding: 5% 2%;
+  margin: 5px auto;
+  border: 1px white solid;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-decoration: none;
+  transition: all 0.7s;
+}
+.menu a:hover,
+.menu a:active {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
 
 
 		

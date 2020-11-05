@@ -1,15 +1,13 @@
 import './App.css';
 import Sidebar from './Sidebar';
 import Background from './assets/Feb26_BloomGeneration-2322.jpg';
-import ToggleDisplay from "react-toggle-display";
 
 
 function App() {
-  handleSidebar = () => {
-    // this.setState({
-    //   show: !this.state.show,
-    // });
-  };
+
+  // const [menu, setMenu] = viewMenu();
+
+
 
   return (
     <div className="App">
@@ -20,10 +18,18 @@ function App() {
           <button>Enter</button>
         </div>
       </div>
-    <Toggle>
-      {/* <Sidebar /> */}
 
-    </Toggle>
+      <div className="menu">
+        <h2>Make an Entry</h2>
+        <a href="">Astro Observations</a>
+        <a href="">Ledger of Symbols</a>
+        <a href="">Tarot Spreads</a>
+        <a href="">Crystals</a>
+        <a href="">Rituals</a>
+        <a href="">Spells</a>
+        <a href="">Herbs</a>
+      </div>
+      {/* <Sidebar /> */}
     </div>
   );
 }
