@@ -23,14 +23,13 @@ body {
   font-family: 'Sweet', sans-serif;
 }
 
-
-
 .App {
   text-align: center;
   color: white;
 }
 
-.homePage {
+.homePage,
+.entry {
   border: 1px solid white;
   width: 610px;
   height: 98vh;
@@ -42,19 +41,36 @@ body {
   background-repeat: no-repeat;
   font-size: 1.5rem;
 }
-.content {
+
+
+.content, 
+.entryBubble {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 80%;
 }
+.entryBubble {
+  justify-content: space-around;
+}
+.details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  margin: 10px;
+}
+
+
 button {
   font-family: 'Sweet', sans-serif;
   border: none;
   padding: 3px 25px;
   background: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
   border: 1px solid white;
   color: white;
   transition: all 0.7s;
@@ -83,10 +99,12 @@ button:active {
 }
 .menu h2 {
   padding: 5%;
+  background: rgba(0, 0, 0, 0.8);
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
 }
+
 .menu a {
   width: 90%;
   padding: 5% 2%;
@@ -103,6 +121,12 @@ button:active {
   color: black;
 }
 
+.entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 		
 
