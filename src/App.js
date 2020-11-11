@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
+import './css/styles.css';
 import Sidebar from './Sidebar';
 import Background from './assets/Feb26_BloomGeneration-2322.jpg';
 // TODO destructure?!
@@ -14,9 +14,13 @@ import Herbs from './pages/herbs';
 
 
 
-function App() {
+export default function App() {
 
-  // const [menu, setMenu] = viewMenu();
+  // const sideviewRef = useRef(null);
+  const [viewMenu, setViewMenu] = useState(false); // viewMenu fn toggles boolean
+
+
+  const toggleMenu = () => setViewMenu(!viewMenu);
 
   return (
     <div className="App">
@@ -34,16 +38,14 @@ function App() {
           <div className="homePage" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.3), black), url(" + Background + ")" }}>
             <div className="content">
               <h1>le grimoire</h1>
-              <button>Enter</button>
+              <button onClick={toggleMenu}>{viewMenu ? `Close` : `Enter`}</button>
             </div>
           </div>
         </Route>
-
       </Switch>
 
-      <Sidebar />
+      <Sidebar view={viewMenu}/>
     </div>
   );
 }
 
-export default App;
