@@ -1,0 +1,44 @@
+
+.menu {
+  width: 28%;
+  height: 100vh;
+  position: absolute;
+  right: -200px;
+  top: 0; 
+  transition: transform 0.8s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  transition: all 0.8s;
+  opacity: 0;
+  h2 {
+    font-size: 1.5rem;
+    padding: 5%;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  a {
+    @include color($hoverText);
+    // reverse order to replace some styles from the mixin
+    width: 90%;
+    padding: 5% 2%;
+    margin: 5px auto;
+    text-decoration: none;
+    background: black;
+  }
+}
+
+
+.menu.inactive {
+  opacity: 0; 
+  right: -200px;
+}
+.menu.active {
+  opacity: 1;
+  right: 0;
+}
+
+

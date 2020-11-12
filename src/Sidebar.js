@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function Sidebar(props) {
+    
     return (
         <div className={`menu ${props.view ? "active" : "inactive"}`}>
             
