@@ -1,6 +1,7 @@
 const express = require('express');
-const uuid = require('uuid');
 const router = express.Router();
+
+const uuid = require('uuid');
 
 // WHAT WILL THIS BE?
 const entries = require('/entries'); 

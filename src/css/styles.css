@@ -331,7 +331,6 @@ button:hover, button:active {
   text-align: left;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
-  opacity: 0;
 }
 
 .menu h2 {
@@ -343,7 +342,7 @@ button:hover, button:active {
   border-top: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-.menu a {
+.menu .link {
   font-family: 'Sweet', sans-serif;
   border: none;
   padding: 3px 25px;
@@ -359,19 +358,48 @@ button:hover, button:active {
   background: black;
 }
 
-.menu a:hover, .menu a:active {
+.menu .link:hover, .menu .link:active {
   background: rgba(255, 255, 255, 0.8);
   color: black;
+}
+
+.menu .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  border: none;
+  text-align: center;
+}
+
+.menu .flex:hover, .menu .flex:focus {
+  background: transparent;
+  border: none;
+}
+
+.menu .flex .link {
+  width: 49%;
+  margin: 0;
 }
 
 .menu.inactive {
   opacity: 0;
   right: -200px;
+  position: relative;
 }
 
 .menu.active {
   opacity: 1;
   right: 0;
+}
+
+.reOpen {
+  opacity: 1;
+  position: fixed;
+  left: -400px;
 }
 
 .content,

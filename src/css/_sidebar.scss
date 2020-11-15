@@ -11,7 +11,7 @@
   justify-content: center;
   text-align: left;
   transition: all 0.8s;
-  opacity: 0;
+  // opacity: 0;
   
   h2 {
     font-size: 1.5rem;
@@ -21,7 +21,7 @@
     border-left: 1px solid rgba(255, 255, 255, 0.7);
     border-top: 1px solid rgba(255, 255, 255, 0.7);
   }
-  a {
+  .link {
     @include color($hoverText);
     // reverse order to replace some styles from the mixin
     width: 90%;
@@ -30,16 +30,38 @@
     text-decoration: none;
     background: black;
   }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    border: none;
+    text-align: center;
+    &:hover,
+    &:focus {
+      background: transparent;
+      border: none;
+    }
+    .link {
+      width: 49%;
+      margin: 0;
+    }
+  }
 }
 
 
 .menu.inactive {
   opacity: 0; 
   right: -200px;
+  position: relative;
 }
 .menu.active {
   opacity: 1;
   right: 0;
 }
 
+.reOpen {
+  opacity: 1;
+  position: fixed;
+  left: -400px;
+}
 

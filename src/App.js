@@ -20,10 +20,10 @@ import SignUp from './pages/signUp';
 export default function App() {
 
   const [entries, setUserEntries] = useState([]);
+  const [authenticated, setAuthenticated] = useState(false);
   const [userId, setUserId] = useState(null);
   const [viewMenu, setViewMenu] = useState(false); 
   // viewMenu fn toggles boolean
-
 
   const toggleMenu = () => setViewMenu(!viewMenu);
 
@@ -104,7 +104,7 @@ export default function App() {
                 <button>Log In</button> 
                 {/* <Link to='/signUp'>Sign Up</Link>
                 <Link to='/logIn'>Log In</Link> */}
-                <button onClick={toggleMenu}>{viewMenu ? `Close` : `Enter`}</button>
+                <button menuClose={viewMenu} onClick={toggleMenu}>{viewMenu ? `Close` : `Enter`}</button>
               </div>
 
             </div>
@@ -113,7 +113,7 @@ export default function App() {
 
       </Switch>
 
-      <Sidebar view={viewMenu}/>
+      <Sidebar view={viewMenu} toggleMenu={toggleMenu}/>
     </div>
   );
 }
