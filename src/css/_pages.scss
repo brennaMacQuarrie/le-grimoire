@@ -1,37 +1,63 @@
+.content, 
+.entryBubble {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+}
+
+
+
 .entry {
   display: flex;
   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
+  
   .inputField {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    .flex {
       display: flex;
-      flex-direction: column;
-      text-align: left;
-      padding: 20px;
+      justify-content: space-between;
+      .col {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        #title {
+          // TODO how to make this "one line" and make form unison
+          height: 32px;
+        }
+      }
+    }
+    input {
       width: 100%;
-      height: 100%;
-      font-size: 1.2rem;
-     
-      input {
-        width: 100%;
-        font-family: 'Sweet', sans-serif;
-      }
+      font-family: 'Sweet', sans-serif;
+    }
     // center date
-      #start {
-        text-align: center;
-      }
+    #start {
+      text-align: center;
+    }
     // text entry
-      #entry {
-        height: 50%; // this cant go higher????
-        font-family: 'Sweet', sans-serif;
-      }
-
-      input[type=submit] {
-        background: transparent;
-        margin: 10px auto;
-        @include color($hoverText);
-      }
+    #entry {
+      height: 70%; 
+      font-family: 'Sweet', sans-serif;
+    }
+    
+    input[type=submit] {
+      background: transparent;
+      margin: 10px auto;
+      @include color($hoverText);
+    }
   }
 }
 
 
+
+label {
+  margin: 10px 0;
+}

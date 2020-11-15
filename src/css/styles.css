@@ -255,7 +255,6 @@ body {
   border: 1px solid white;
   width: 610px;
   height: 98vh;
-  background: transparent;
   margin: 10px auto;
   padding: 50px 0;
   background-size: cover;
@@ -264,8 +263,7 @@ body {
   font-size: 1.5rem;
 }
 
-.content,
-.entryBubble {
+.actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,39 +271,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 80%;
-}
-
-.entryBubble {
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-.details {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-label {
-  margin: 10px;
+  height: 30%;
 }
 
 button {
@@ -322,6 +290,22 @@ button {
 button:hover, button:active {
   background: rgba(255, 255, 255, 0.8);
   color: black;
+}
+
+.signUp {
+  border: none;
+  background: transparent;
+}
+
+.signUp::before {
+  content: url(../assets/rose.svg);
+  position: absolute;
+  left: -50px;
+}
+
+.signUp:hover, .signUp:focus {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
 }
 
 .menu {
@@ -352,7 +336,7 @@ button:hover, button:active {
 
 .menu h2 {
   font-size: 1.5rem;
-  padding: 5%;
+  padding: 4%;
   background: rgba(0, 0, 0, 0.8);
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
@@ -369,7 +353,7 @@ button:hover, button:active {
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
   width: 90%;
-  padding: 5% 2%;
+  padding: 3%;
   margin: 5px auto;
   text-decoration: none;
   background: black;
@@ -388,6 +372,24 @@ button:hover, button:active {
 .menu.active {
   opacity: 1;
   right: 0;
+}
+
+.content,
+.entryBubble {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
 }
 
 .entry {
@@ -415,6 +417,30 @@ button:hover, button:active {
   font-size: 1.2rem;
 }
 
+.entry .inputField .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.entry .inputField .flex .col {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.entry .inputField .flex .col #title {
+  height: 32px;
+}
+
 .entry .inputField input {
   width: 100%;
   font-family: 'Sweet', sans-serif;
@@ -425,7 +451,7 @@ button:hover, button:active {
 }
 
 .entry .inputField #entry {
-  height: 50%;
+  height: 70%;
   font-family: 'Sweet', sans-serif;
 }
 
@@ -445,5 +471,9 @@ button:hover, button:active {
 .entry .inputField input[type=submit]:hover, .entry .inputField input[type=submit]:active {
   background: rgba(255, 255, 255, 0.8);
   color: black;
+}
+
+label {
+  margin: 10px 0;
 }
 /*# sourceMappingURL=styles.css.map */
