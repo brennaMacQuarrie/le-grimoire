@@ -33,13 +33,16 @@ body {
   font-family: 'Sweet', sans-serif;
   border: none;
   padding: 3px 25px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
   border: 1px solid white;
+  text-shadow: 1px 1px 5px black;
   color: white;
+  font-weight: 600;
   transition: all 0.7s;
   &:hover,
   &:active {
     background: rgba(255, 255, 255, 0.8);
     color: black;
+    text-shadow: none;
   }
 }

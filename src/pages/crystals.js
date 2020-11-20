@@ -1,8 +1,10 @@
 import Button from "../components/button";
+import Background from '../assets/background_flowers2.jpg';
+
 
 export default function Crystals(props) {
     return (
-        <div className="entry">
+        <div className="entry" style={{ backgroundImage: "linear-gradient(black, rgba(0,0,0,0.3)), url(" + Background + ")" }}>
             <div className="entryBubble">
                 <h2>Crystals</h2>
                 <div className="inputField">

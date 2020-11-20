@@ -12,7 +12,7 @@
 .entry {
   display: flex;
   flex-direction: column;
-  
+  background-position: center;
   .inputField {
     display: flex;
     flex-direction: column;
@@ -28,23 +28,25 @@
         width: 48%;
         display: flex;
         flex-direction: column;
-        #title {
-          // TODO how to make this "one line" and make form unison
-          height: 32px;
-        }
       }
     }
     input {
       width: 100%;
       font-family: 'Sweet', sans-serif;
     }
-    // center date
+    // date
     #start {
       text-align: center;
     }
-    // text entry
+    // entry title
+    #title {
+      height: 32px;
+      padding: 4px 0 0 5px;
+      font-family: 'Sweet', sans-serif;
+    }
+    // full text box
     #entry {
-      height: 70%; 
+      height: 80%; 
       font-family: 'Sweet', sans-serif;
     }
     
