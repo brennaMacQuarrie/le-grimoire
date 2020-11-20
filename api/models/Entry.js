@@ -1,6 +1,8 @@
+// import the stuff
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
+// build the unique data format
 const entrySchema = new Schema({
     title: String,
     publishedDate: {
@@ -10,7 +12,7 @@ const entrySchema = new Schema({
     category: String,
     text: String,
     bookmarked: Boolean,
-    // image: String
+    // image: String >>>> stretch goal
 });
 
 // exporting mongoose model

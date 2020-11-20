@@ -3,9 +3,7 @@
   width: 28%;
   height: 100vh;
   position: absolute;
-  right: -200px;
   top: 0; 
-  transition: transform 0.8s;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,21 +45,36 @@
     }
   }
 }
-
-
-.menu.inactive {
-  opacity: 0; 
-  right: -200px;
-  position: relative;
-}
 .menu.active {
-  opacity: 1;
   right: 0;
 }
 
-.reOpen {
-  opacity: 1;
-  position: fixed;
-  left: -400px;
+.menu.inactive {
+  right: -500px;
 }
 
+// TODO make a rose
+.reOpen {
+  font-size: 2rem;
+  position: fixed;
+  right: 0;
+  top: 48%;
+  opacity: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  margin: 10px;
+  transition: all 0.8s;
+  &:hover,
+  &:focus {
+    transform: translateX(-10px);
+    background: transparent;
+    color: white;
+  }
+}
+
+
+.reOpen.inactive {
+  opacity: 0; 
+  right: 28%;
+}

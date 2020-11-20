@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
+const entrySchema = require('../models/Entry');
+
 const userSchema = new Schema({
     name: {
         type: String,
@@ -14,12 +16,11 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    entries: {
-        // coming from entries.js
-    }
+    entries: [entrySchema]
 });
 
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
-// jwt tokens
+
+// look up jwt tokens?

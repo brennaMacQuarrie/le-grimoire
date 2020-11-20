@@ -26,9 +26,9 @@ export default function Crystals(props) {
                     <label htmlFor="astroEntry">Entry</label>
                     <textarea type="text" id="entry"></textarea>
                     {/* <form action="/action_page.php"> */}
-                        <label for="img">Select image:</label>
+                        {/* <label for="img">Select image:</label>
                         <input type="file" id="img" name="img" accept="image/*" />
-                        <input type="submit" />
+                        <input type="submit" /> */}
                     {/* </form> */}
                 </div>
 

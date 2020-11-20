@@ -19,6 +19,7 @@ $hoverText: black;
 body {
   background: $hoverText;
   font-family: 'Sweet', sans-serif;
+  overflow-x: hidden;
 }
 
 .App {

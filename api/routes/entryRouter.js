@@ -1,16 +1,17 @@
 const express = require('express');
-const Entry = require('../models/Entry');
 const router = express.Router();
 
-// what will this be?
 const Entry = require('../models/Entry');
 
 router.get('/', async (req, res) => {
+    // go get this from the entryRouter??? where is it coming from?
     const entries = await Entry.find();
     res.json(entries);
 });
 
+// add a new entry
 router.post('/', async (req, res) => {
+    // destructuring
     const { title, publishedDate, category, text, bookmarked } = req.body;
 
     const newEntry = new Entry({

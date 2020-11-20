@@ -12,8 +12,8 @@ export default function LogIn() {
                             type="text"
                             placeholder="Enter a username"
                             required
-                            value={this.state.formData.username}
-                            onChange={this.handleFormChange}
+                            // value={this.state.formData.username}
+                            // onChange={this.handleFormChange}
                         />
                     </div>
                     
@@ -23,8 +23,8 @@ export default function LogIn() {
                             type="email"
                             placeholder="Enter an email address"
                             required
-                            value={this.state.formData.email}
-                            onChange={this.handleFormChange}
+                            // value={this.state.formData.email}
+                            // onChange={this.handleFormChange}
                         />
                     </div>
 
@@ -34,15 +34,15 @@ export default function LogIn() {
                             type="password"
                             placeholder="Enter a password"
                             required
-                            value={this.state.formData.password}
-                            onChange={this.handleFormChange}
+                            // value={this.state.formData.password}
+                            // onChange={this.handleFormChange}
                         />
                     </div>
                     
                     <input
                         type="submit"
                         value="Submit"
-                        disabled={!this.state.valid}
+                        // disabled={!this.state.valid}
                     />
                 </form>
             </div>

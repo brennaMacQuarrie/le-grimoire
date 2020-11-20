@@ -243,6 +243,7 @@ html {
 body {
   background: black;
   font-family: 'Sweet', sans-serif;
+  overflow-x: hidden;
 }
 
 .App {
@@ -312,12 +313,7 @@ button:hover, button:active {
   width: 28%;
   height: 100vh;
   position: absolute;
-  right: -200px;
   top: 0;
-  -webkit-transition: -webkit-transform 0.8s;
-  transition: -webkit-transform 0.8s;
-  transition: transform 0.8s;
-  transition: transform 0.8s, -webkit-transform 0.8s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -385,21 +381,38 @@ button:hover, button:active {
   margin: 0;
 }
 
-.menu.inactive {
-  opacity: 0;
-  right: -200px;
-  position: relative;
-}
-
 .menu.active {
-  opacity: 1;
   right: 0;
 }
 
+.menu.inactive {
+  right: -500px;
+}
+
 .reOpen {
-  opacity: 1;
+  font-size: 2rem;
   position: fixed;
-  left: -400px;
+  right: 0;
+  top: 48%;
+  opacity: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  margin: 10px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.reOpen:hover, .reOpen:focus {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  background: transparent;
+  color: white;
+}
+
+.reOpen.inactive {
+  opacity: 0;
+  right: 28%;
 }
 
 .content,
