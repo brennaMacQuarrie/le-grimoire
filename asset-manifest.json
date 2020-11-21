@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/le-grimoire/static/css/main.98fe84c4.chunk.css",
+    "main.css": "/le-grimoire/static/css/main.8f33eeac.chunk.css",
     "main.js": "/le-grimoire/static/js/main.81f2f5fd.chunk.js",
     "main.js.map": "/le-grimoire/static/js/main.81f2f5fd.chunk.js.map",
     "runtime-main.js": "/le-grimoire/static/js/runtime-main.42052e18.js",
@@ -10,7 +10,7 @@
     "static/js/3.017ae22e.chunk.js": "/le-grimoire/static/js/3.017ae22e.chunk.js",
     "static/js/3.017ae22e.chunk.js.map": "/le-grimoire/static/js/3.017ae22e.chunk.js.map",
     "index.html": "/le-grimoire/index.html",
-    "static/css/main.98fe84c4.chunk.css.map": "/le-grimoire/static/css/main.98fe84c4.chunk.css.map",
+    "static/css/main.8f33eeac.chunk.css.map": "/le-grimoire/static/css/main.8f33eeac.chunk.css.map",
     "static/js/2.c334f87e.chunk.js.LICENSE.txt": "/le-grimoire/static/js/2.c334f87e.chunk.js.LICENSE.txt",
     "static/media/Feb26_BloomGeneration-2322.c582a0e5.jpg": "/le-grimoire/static/media/Feb26_BloomGeneration-2322.c582a0e5.jpg",
     "static/media/styles.css": "/le-grimoire/static/media/rose.f3d8cf1c.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.42052e18.js",
     "static/js/2.c334f87e.chunk.js",
-    "static/css/main.98fe84c4.chunk.css",
+    "static/css/main.8f33eeac.chunk.css",
     "static/js/main.81f2f5fd.chunk.js"
   ]
 }
