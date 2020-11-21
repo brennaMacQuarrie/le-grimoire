@@ -288,6 +288,8 @@ button {
   font-weight: 600;
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
+  text-shadow: none;
+  font-weight: 300;
 }
 
 button:hover, button:active {
@@ -375,6 +377,7 @@ button:hover, button:active {
   padding: 0;
   border: none;
   text-align: center;
+  background: transparent;
 }
 
 .menu .flex:hover, .menu .flex:focus {
@@ -528,5 +531,37 @@ button:hover, button:active {
 
 label {
   margin: 10px 0;
+}
+
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .menu.active {
+    width: 50%;
+  }
+  .homePage,
+  .entry {
+    width: 100vw;
+    height: 98vh;
+    padding: 50px 20px;
+  }
+  .reOpen {
+    font-size: 1.7rem;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 650px) {
+  .menu.active {
+    width: 100%;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.6);
+    text-align: center;
+  }
+  .menu.active h2 {
+    border-right: 1px solid white;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

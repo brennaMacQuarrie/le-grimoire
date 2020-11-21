@@ -1,0 +1,40 @@
+/* Portrait tablet and small desktops */
+// @media (max-width: 940px) {
+// }
+
+
+
+// TODO make full page grey on menu open
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    .menu.active {
+        width: 50%;
+        // background: rgba(255, 255, 255, 0.6);
+    }
+    .homePage,
+    .entry {
+        width: 100vw;
+        height: 98vh;
+        padding: 50px 20px;
+    }
+    .reOpen {
+        font-size: 1.7rem;
+        right: 0;
+        top: 0;
+    }
+    
+}
+
+/* Landscape phones and down */
+@media (max-width: 650px) {
+    .menu.active {
+        width: 100%;
+        padding: 20px 50px;
+        background: rgba(255, 255, 255, 0.6);
+        text-align: center;
+        h2 {
+            border-right: 1px solid white;
+        }
+    }
+}

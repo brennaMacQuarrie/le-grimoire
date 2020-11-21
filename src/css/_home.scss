@@ -21,8 +21,9 @@
 
 button {
   @include color($hoverText);
+  text-shadow: none;
+  font-weight: 300;
 }
-
 .signUp {
   border: none;
   background: transparent;
