@@ -4,14 +4,15 @@ const { Schema } = mongoose;
 
 // build the unique data format
 const entrySchema = new Schema({
-    title: String,
+    // user: user._id, // do i need this?
     publishedDate: {
         type: Date,
         default: Date.now,
     },
-    category: String,
+    category: String, // from page name
+    title: String, // from title text
     text: String,
-    bookmarked: Boolean,
+    bookmarked: Boolean,  
     // image: String >>>> stretch goal
 });
 

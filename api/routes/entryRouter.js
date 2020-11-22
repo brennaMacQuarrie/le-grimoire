@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
 
 // add a new entry
 router.post('/', async (req, res) => {
+    console.log(req.body);
     // destructuring
     const { title, publishedDate, category, text, bookmarked } = req.body;
 

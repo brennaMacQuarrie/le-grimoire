@@ -1,8 +1,8 @@
 const express = require('express');
 
 // importing my routes... 
-const entryRouter = require('./routes/entryRouter');
-const userRouter = require('./routes/userRouter');
+const entryRouter = require('./api/routes/entryRouter');
+const userRouter = require('./api/routes/userRouter');
 
 const app = express();
 
@@ -23,10 +23,7 @@ mongoose
         console.log(err.message);
 })
 
-
-
-
-app.use(bodyParser.json());
+app.use(express.json());
 
 // does this say >> /entries is where to get info for entryRouter?
 app.use('/entries', entryRouter);

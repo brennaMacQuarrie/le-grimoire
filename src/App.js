@@ -3,7 +3,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 
 import './css/styles.css';
 
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/sidebar';
 
 // import Home from './pages/home';
 import Background from './assets/Feb26_BloomGeneration-2322.jpg';
@@ -24,75 +24,43 @@ export default function App() {
 
   const [entries, setUserEntries] = useState([]);
   const [authenticated, setAuthenticated] = useState(false);
-  const [userId, setUserId] = useState(null);
+  const [userId, setUserId] = useState(10);
   const [viewMenu, setViewMenu] = useState(false); 
   // viewMenu fn toggles boolean
 
   const toggleMenu = () => setViewMenu(!viewMenu);
 
-  // useEffect(() => {
-  //   const fetchEntries = async () => {
-  //     // GET products
-  //     const response = await fetch('http://localhost:3000/entries', {
-  //       method: 'GET',
-  //     });
-  //     const data = await response.json();
-  //     setEntries(data);
-  //   }
-  //   fetchEntries();
-  // }, [])
 
-  const addEntry = async (newEntryId) => {
-    const body = {
-      entryId: newEntryId,
-    }
-    if (!userId) {
-      // should this be 5000?
-      const response = await fetch('http://localhost:3000/users', {
-        method: 'POST',
-        body: JSON.stringify(body),
-      })
-      const data = await response.json();
-      setUserId(data.id);
-      setUserEntries(data.entries);
-    } else {
-      const response = await fetch(`http://localhost:3000/users/${userId}`, {
-        method: 'PATCH',
-        body: JSON.stringify(body),
-      })
-      const data = await response.json();
-      setUserEntries(data.entries);
-    }
-  }
 
   return (
     <div className="App">
 
       <Switch>
         <Route path="/astro" 
-                component={Astro} 
-                addEntry={addEntry}/>
+          render={() => <Astro  />} 
+                />
         <Route path="/symbols" 
-                component={Symbols} 
-                addEntry={addEntry}/>
-        <Route path="/tarot" 
-                component={Tarot} 
-                addEntry={addEntry}/>
-        <Route path="/crystals" 
-                component={Crystals} 
-                addEntry={addEntry}/>
-        <Route path="/rituals" 
-                component={Rituals} 
-                addEntry={addEntry}/>
-        <Route path="/spells" 
-                component={Spells} 
-                addEntry={addEntry}/>
-        <Route path="/herbs" 
-                component={Herbs}
-                addEntry={addEntry} />
-        <Route path="/entries" 
-                component={Entries}
-                entries={entries} />
+                render={() => <Symbols />}
+                />
+        <Route path="/tarot"
+          render={() => <Tarot  />}
+                />
+        <Route path="/crystals"
+          render={() => <Crystals  />}
+                />
+        <Route path="/rituals"
+          render={() => <Rituals  />}
+                />
+        <Route path="/spells"
+          render={() => <Spells  />}
+                />
+        <Route path="/herbs"
+          render={() => <Herbs  />}
+                />
+        <Route path="/entries"
+          render={() => <Entries />}
+                />
+
         {/* HOMEPAGE */}
         <Route path="/">
               {/* //  component={Home}

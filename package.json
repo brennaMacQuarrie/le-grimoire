@@ -25,7 +25,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start:client": "react-scripts start",
-    "start:server": "nodemon 'api/server.js' --ignore 'src'",
+    "start:server": "nodemon './server.js' --ignore 'src'",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -62,5 +62,6 @@
   },
   "bugs": {
     "url": "https://github.com/brennaMacQuarrie/le-grimoire/issues"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
