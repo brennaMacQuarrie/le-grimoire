@@ -277,6 +277,7 @@ body {
   height: 30%;
 }
 
+a.button,
 button {
   font-family: 'Sweet', sans-serif;
   border: none;
@@ -292,24 +293,28 @@ button {
   font-weight: 300;
 }
 
-button:hover, button:active {
+a.button:hover, a.button:active,
+button:hover,
+button:active {
   background: rgba(255, 255, 255, 0.8);
   color: black;
   text-shadow: none;
 }
 
+.button,
 .signUp {
   border: none;
   background: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  -webkit-transition: 0.8s all;
+  transition: 0.8s all;
 }
 
-.signUp::before {
-  content: url(../assets/rose.svg);
-  position: absolute;
-  left: -50px;
-}
-
-.signUp:hover, .signUp:focus {
+.button:hover, .button:focus,
+.signUp:hover,
+.signUp:focus {
   background: rgba(255, 255, 255, 0.3);
   color: white;
 }
@@ -493,7 +498,7 @@ button:hover, button:active {
   font-family: 'Sweet', sans-serif;
 }
 
-.entry .inputField #start {
+.entry .inputField #date {
   text-align: center;
 }
 

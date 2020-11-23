@@ -19,20 +19,21 @@
   height: 30%;
 }
 
+a.button,
 button {
   @include color($hoverText);
   text-shadow: none;
   font-weight: 300;
 }
+
+.button,
 .signUp {
   border: none;
   background: transparent;
-  &::before{
-    content: url(../assets/rose.svg);
-    position: absolute;
-    left: -50px
-  }
-
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: 0.8s all;
   &:hover,
   &:focus {
     background: rgba(255, 255, 255, 0.3);

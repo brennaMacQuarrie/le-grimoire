@@ -5,7 +5,7 @@ import './css/styles.css';
 
 import Sidebar from './components/sidebar';
 
-// import Home from './pages/home';
+import Home from './pages/home';
 import Background from './assets/Feb26_BloomGeneration-2322.jpg';
 import Astro from './pages/astro';
 import Symbols from './pages/symbols';
@@ -62,11 +62,12 @@ export default function App() {
                 />
 
         {/* HOMEPAGE */}
-        <Route path="/">
-              {/* //  component={Home}
-              //  viewMenu={viewMenu}
-  //  toggleMenu={toggleMenu} /> */}
-          <div className="homePage" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.3), black), url(" + Background + ")" }}>
+        <Route path="/"
+          render={() => <Home viewMenu= { viewMenu }
+              toggleMenu={toggleMenu} />}
+               /> 
+  
+          {/* <div className="homePage" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.3), black), url(" + Background + ")" }}>
             <div className="content">
 
               <h1>le grimoire</h1>
@@ -80,8 +81,8 @@ export default function App() {
               </div>
 
             </div>
-          </div>
-        </Route>
+          </div> 
+        </Route> */}
       </Switch>
 
       <Sidebar view={viewMenu} toggleMenu={toggleMenu}/>

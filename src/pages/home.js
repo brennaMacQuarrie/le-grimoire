@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
+
+import '../css/styles.css';
+
 import Background from '../assets/Feb26_BloomGeneration-2322.jpg';
 import LogIn from './logIn';
 import SignUp from './signUp';
@@ -24,8 +27,8 @@ export default function Home(props) {
 
                     {/* <button className="signUp">Sign Up</button>
                     <button>Log In</button>  */}
-                    <Link className="link" to='/signUp'>Sign Up</Link>
-                    <Link className="link" to='/logIn'>Log In</Link>
+                    <Link className="link signUp" to='/signUp'>Sign Up</Link>
+                    <Link className="link button" to='/logIn'>Log In</Link>
                
                     <button menuClose={props.viewMenu} onClick={props.toggleMenu}>{props.viewMenu ? `Close` : `Enter`}</button>
                 </div>
