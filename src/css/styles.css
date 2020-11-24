@@ -285,8 +285,6 @@ body {
 .homeLink:hover, .homeLink:focus {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  background: transparent;
-  color: white;
 }
 
 .homePage,
