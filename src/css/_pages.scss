@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 80%;
+  height: 100%;
 }
 
 
@@ -43,21 +43,25 @@
       height: 32px;
       padding: 4px 0 0 5px;
       font-family: 'Sweet', sans-serif;
+      resize: none;
     }
     // full text box
     #entry {
       height: 80%; 
       font-family: 'Sweet', sans-serif;
-    }
-    
-    input[type=submit] {
-      background: transparent;
-      margin: 10px auto;
-      @include color($hoverText);
+      resize: none;
     }
   }
 }
 
+.submitDiv {
+  display: flex;
+  justify-content: center;
+  .submitButton {
+    @include color($hoverText);
+    margin: 20px auto;
+  }
+}
 
 
 label {

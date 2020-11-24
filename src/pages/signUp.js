@@ -3,7 +3,7 @@ import Background from '../assets/background_flowers2.jpg';
 export default function SignUp() {
     return (
         <div className="entry" style={{ backgroundImage: "linear-gradient(black, rgba(0,0,0,0.3)), url(" + Background + ")" }}>
-            <div className="entryBubble">
+            <div className="entryBubble signupLogin">
                 <h2>Sign Up</h2>
                 <form>
 
@@ -11,7 +11,7 @@ export default function SignUp() {
                         <input
                             name="username"
                             type="text"
-                            placeholder="Enter a username"
+                            placeholder="username"
                             required
                         />
                     </div>
@@ -20,7 +20,7 @@ export default function SignUp() {
                         <input
                             name="email"
                             type="email"
-                            placeholder="Enter an email address"
+                            placeholder="email"
                             required
                         />
                     </div>
@@ -29,7 +29,7 @@ export default function SignUp() {
                         <input
                             name="password"
                             type="password"
-                            placeholder="Enter a password"
+                            placeholder="password"
                             required
                         />
                     </div>

@@ -54,26 +54,6 @@
   right: -500px;
 }
 
-// TODO make a rose
-.reOpen {
-  font-size: 2rem;
-  position: fixed;
-  right: 0;
-  top: 48%;
-  opacity: 1;
-  border: none;
-  background: transparent;
-  padding: 10px;
-  margin: 10px;
-  transition: all 0.8s;
-  &:hover,
-  &:focus {
-    transform: translateX(-10px);
-    background: transparent;
-    color: white;
-  }
-}
-
 
 .reOpen.inactive {
   opacity: 0; 

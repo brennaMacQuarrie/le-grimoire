@@ -1,7 +1,6 @@
 export default function Button(props) {
     return (
-        <div>
-            {/* TODO passing props two levels, can be avoided? */}
+        <div className="submitDiv">
             <button className="submitButton" onClick={props.addEntry} type="button" >send entry</button>
         </div>
     )

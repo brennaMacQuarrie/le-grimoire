@@ -251,6 +251,44 @@ body {
   color: white;
 }
 
+.homeLink,
+.reOpen {
+  font-size: 1.3rem;
+  color: white;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  opacity: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.homeLink:hover, .homeLink:focus,
+.reOpen:hover,
+.reOpen:focus {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  background: transparent;
+  color: white;
+}
+
+.homeLink {
+  font-size: 1rem;
+  top: 10px;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.homeLink:hover, .homeLink:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background: transparent;
+  color: white;
+}
+
 .homePage,
 .entry {
   border: 1px solid white;
@@ -264,7 +302,13 @@ body {
   font-size: 1.5rem;
 }
 
-.actions {
+.homePage .content,
+.entry .content {
+  height: 70%;
+}
+
+.homePage .content .actions,
+.entry .content .actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,7 +318,6 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 30%;
 }
 
 a.button,
@@ -282,9 +325,12 @@ button {
   font-family: 'Sweet', sans-serif;
   border: none;
   padding: 3px 25px;
+  margin-top: 20px;
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid white;
-  text-shadow: 1px 1px 5px black;
+  text-shadow: 2px 2px 3px black;
+  -webkit-box-shadow: 1px 1px 5px black;
+          box-shadow: 1px 1px 5px black;
   color: white;
   font-weight: 600;
   -webkit-transition: all 0.7s;
@@ -296,7 +342,7 @@ button {
 a.button:hover, a.button:active,
 button:hover,
 button:active {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
   color: black;
   text-shadow: none;
 }
@@ -352,9 +398,12 @@ button:active {
   font-family: 'Sweet', sans-serif;
   border: none;
   padding: 3px 25px;
+  margin-top: 20px;
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid white;
-  text-shadow: 1px 1px 5px black;
+  text-shadow: 2px 2px 3px black;
+  -webkit-box-shadow: 1px 1px 5px black;
+          box-shadow: 1px 1px 5px black;
   color: white;
   font-weight: 600;
   -webkit-transition: all 0.7s;
@@ -367,7 +416,7 @@ button:active {
 }
 
 .menu .link:hover, .menu .link:active {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
   color: black;
   text-shadow: none;
 }
@@ -403,27 +452,6 @@ button:active {
   right: -500px;
 }
 
-.reOpen {
-  font-size: 2rem;
-  position: fixed;
-  right: 0;
-  top: 48%;
-  opacity: 1;
-  border: none;
-  background: transparent;
-  padding: 10px;
-  margin: 10px;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
-}
-
-.reOpen:hover, .reOpen:focus {
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
-  background: transparent;
-  color: white;
-}
-
 .reOpen.inactive {
   opacity: 0;
   right: 28%;
@@ -444,7 +472,7 @@ button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80%;
+  height: 100%;
 }
 
 .entry {
@@ -506,36 +534,100 @@ button:active {
   height: 32px;
   padding: 4px 0 0 5px;
   font-family: 'Sweet', sans-serif;
+  resize: none;
 }
 
 .entry .inputField #entry {
   height: 80%;
   font-family: 'Sweet', sans-serif;
+  resize: none;
 }
 
-.entry .inputField input[type=submit] {
-  background: transparent;
-  margin: 10px auto;
+.submitDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.submitDiv .submitButton {
   font-family: 'Sweet', sans-serif;
   border: none;
   padding: 3px 25px;
+  margin-top: 20px;
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid white;
-  text-shadow: 1px 1px 5px black;
+  text-shadow: 2px 2px 3px black;
+  -webkit-box-shadow: 1px 1px 5px black;
+          box-shadow: 1px 1px 5px black;
   color: white;
   font-weight: 600;
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
+  margin: 20px auto;
 }
 
-.entry .inputField input[type=submit]:hover, .entry .inputField input[type=submit]:active {
-  background: rgba(255, 255, 255, 0.8);
+.submitDiv .submitButton:hover, .submitDiv .submitButton:active {
+  background: rgba(255, 255, 255, 0.7);
   color: black;
   text-shadow: none;
 }
 
 label {
   margin: 10px 0;
+}
+
+.signupLogin {
+  height: 50%;
+}
+
+.signupLogin form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 60%;
+  font-size: 1.2rem;
+}
+
+.signupLogin form input {
+  height: 32px;
+  padding: 3px 100px 0 3px;
+  border: 1px solid white;
+  font-family: 'Sweet', sans-serif;
+  font-style: oblique;
+}
+
+.signupLogin form input[type=submit] {
+  background: transparent;
+  margin: 10px auto;
+  font-style: normal;
+  font-family: 'Sweet', sans-serif;
+  border: none;
+  padding: 3px 25px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+  text-shadow: 2px 2px 3px black;
+  -webkit-box-shadow: 1px 1px 5px black;
+          box-shadow: 1px 1px 5px black;
+  color: white;
+  font-weight: 600;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.signupLogin form input[type=submit]:hover, .signupLogin form input[type=submit]:active {
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+  text-shadow: none;
 }
 
 /* Portrait tablet and small desktops */

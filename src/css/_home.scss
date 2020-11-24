@@ -10,14 +10,16 @@
   overflow: hidden;
   background-repeat: no-repeat;
   font-size: 1.5rem;
+  .content {
+    height: 70%;
+    .actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
 }
 
-.actions {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 30%;
-}
 
 a.button,
 button {
@@ -40,3 +42,5 @@ button {
     color: white;
   }
 }
+
+

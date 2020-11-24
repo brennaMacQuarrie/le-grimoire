@@ -1,0 +1,33 @@
+// TODO make roses
+.homeLink,
+.reOpen {
+  font-size: 1.3rem;
+  color: white;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  opacity: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  transition: all 0.8s;
+  &:hover,
+  &:focus {
+    transform: translateX(-10px);
+    background: transparent;
+    color: white;
+  }
+}
+
+.homeLink {
+    font-size: 1rem;
+    top: 10px;
+    text-decoration: none;
+    padding: 0 10px;
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
+        background: transparent;
+        color: white;
+    }
+}
