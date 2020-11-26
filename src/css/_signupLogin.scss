@@ -1,23 +1,29 @@
 .signupLogin {
-    height: 50%;
+    height: 60%;
     form {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 60%;
+        height: 50%;
         font-size: 1.2rem;
+        .col {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
         input {
             height: 32px;
-            padding: 3px 100px 0 3px;
+            padding: 3px 10px 0 5px;
             border: 1px solid white;
             font-family: 'Sweet', sans-serif;
-            font-style: oblique;
+            font-size: 1rem;
         }
         input[type=submit] {
-          background: transparent;
-          margin: 10px auto;
-          font-style: normal;
-          @include color($hoverText);
+            background: transparent;
+            margin: 10px auto;
+            font-style: normal;
+            @include color($hoverText);
         }
     }
 }
+                                               

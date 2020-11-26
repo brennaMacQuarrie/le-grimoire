@@ -7,29 +7,32 @@ export default function SignUp() {
                 <h2>Sign Up</h2>
                 <form>
 
-                    <div>
+                    <div className="col">
+                        <label htmlFor="username">User Name</label>
                         <input
                             name="username"
                             type="text"
-                            placeholder="username"
+                            id="username"
                             required
                         />
                     </div>
 
-                    <div>
+                    <div className="col">
+                        <label htmlFor="email">Email Address</label>
                         <input
                             name="email"
                             type="email"
-                            placeholder="email"
+                            id="email"
                             required
                         />
                     </div>
 
-                    <div>
+                    <div className="col">
+                        <label htmlFor="password">Create a Password</label>
                         <input
                             name="password"
                             type="password"
-                            placeholder="password"
+                            id="password"
                             required
                         />
                     </div>

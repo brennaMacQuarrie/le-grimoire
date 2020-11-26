@@ -9,7 +9,7 @@ export default function Sidebar(props) {
             { (location.pathname !== '/') ? (
                 <button 
                     className={`reOpen ${(props.view) ? "inactive" : "active"}`} 
-                    onClick={props.toggleMenu}><i class="fas fa-angle-double-left"></i></button>
+                    onClick={props.toggleMenu}><i className="fas fa-angle-double-left"></i></button>
                 ) : null
             }
 
