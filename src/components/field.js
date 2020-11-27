@@ -4,25 +4,27 @@ import Button from "./button";
 export default function Field (props) {
     const [title, setTitle] = useState("");
     const [publishedDate, setPublishedDate] = useState("");
+    // TODO get category from h2
     const [category, setCategory] = useState("astrology");
     const [textEntry, setTextEntry] = useState("");
     const [bookmarked, isBookmarked] = useState(false);
    
+
+
+
     const addEntry = async e => {
         e.preventDefault();
-        console.log('button clickeddddd');
+        console.log('button clicked');
         try {
-            const response = await fetch('http://localhost:3000/users', {
-                // headers: { "Content-Type": "application/json" },
+            const response = await fetch('http://localhost:3000/entries', {
+                headers: { "Content-Type": "application/json" },
                 method: 'POST',
                 body: JSON.stringify({ title, publishedDate, category, textEntry, bookmarked })
+            }).then((res) => {
+                return res.json();
+            }).then((res) => {
+                console.log("res", res);
             });
-            if (response.ok) {
-                // props.onAdd();
-                console.log('response ok', response.body);
-            } else {
-                console.log("error saving entry");
-            }
         } catch (e) {
             console.log(e);
         }
@@ -47,8 +49,9 @@ export default function Field (props) {
             </div>
 
             <label htmlFor="entry">Entry</label>
-            <textarea type="text" id="entry"></textarea>
-            <Button addEntry={addEntry} onChange={e => setTextEntry(e.target.value)}/>
+            <textarea type="text" id="entry" onChange={e => setTextEntry(e.target.value)}></textarea>
+
+            <Button addEntry={addEntry} />
         </div>
     )
 }

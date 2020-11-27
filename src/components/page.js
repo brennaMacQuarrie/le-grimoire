@@ -7,7 +7,7 @@ export default function Page(props) {
         <div className="entry" style={{ backgroundImage: "linear-gradient(black, rgba(0,0,0,0.3)), url(" + Background + ")" }}>
             <div className="entryBubble">
                 <h2>{props.title}</h2>
-                <Field />
+                <Field category={props.title} />
             </div>
         </div>
     )

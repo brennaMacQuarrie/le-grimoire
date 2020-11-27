@@ -11,7 +11,6 @@ router.get('/', async (req, res) => {
 
 // add a new entry
 router.post('/', async (req, res) => {
-    console.log(req.body);
     // destructuring
     const { title, publishedDate, category, text, bookmarked } = req.body;
 
@@ -22,10 +21,12 @@ router.post('/', async (req, res) => {
         text: text,
         bookmarked: bookmarked
     })
-
     const entry = await newEntry.save();
-    res.json(entry);
-   
+
+    res.status(201).json({
+        data: entry,
+        error: null,
+    })   
 })
 
 module.exports = router;

@@ -19,6 +19,7 @@ router.get('/', async (req, res) => {
 // to add a new user to the model???
 router.post('/', async (req, res) => {
     // conditional necessary to check for authentication?    
+    console.log('test');
     let user = new User({
             name: req.body.name,
             password: req.body.password,

@@ -29,7 +29,7 @@ app.use(express.json());
 app.use('/entries', entryRouter);
 app.use('/users', userRouter);
 
-// this starts the server?? somehow. magic.
+
 // express
 // frontend
 const PORT = 5000;
