@@ -5,7 +5,7 @@ export default function Field (props) {
     const [title, setTitle] = useState("");
     const [publishedDate, setPublishedDate] = useState("");
     // TODO get category from h2
-    const [category, setCategory] = useState("astrology");
+    const [category, setCategory] = useState(props.title);
     const [textEntry, setTextEntry] = useState("");
     const [bookmarked, isBookmarked] = useState(false);
    

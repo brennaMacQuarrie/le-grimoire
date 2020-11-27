@@ -13,9 +13,17 @@
         font-size: 1.5rem;
         margin: 0;
     }
-    h4 {
-        margin: 8px auto;
-        font-style: oblique;
-        font-weight: 100;
+    .catDate {
+        display: flex;
+        justify-content: center;
+        h4 {
+            margin: 8px auto;
+            font-style: oblique;
+            font-weight: 100;
+            width: 25%;
+            margin: 8px 0;
+            text-transform: capitalize;
+            text-decoration: underline;
+        }
     }
 }

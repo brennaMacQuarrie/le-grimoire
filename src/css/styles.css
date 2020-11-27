@@ -595,10 +595,23 @@ label {
   margin: 0;
 }
 
-.newEntry h4 {
+.newEntry .catDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newEntry .catDate h4 {
   margin: 8px auto;
   font-style: oblique;
   font-weight: 100;
+  width: 25%;
+  margin: 8px 0;
+  text-transform: capitalize;
+  text-decoration: underline;
 }
 
 .signupLogin {
