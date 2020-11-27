@@ -577,6 +577,30 @@ label {
   margin: 10px 0;
 }
 
+.entryPage {
+  padding: 0 10%;
+}
+
+.newEntry {
+  border: 1px solid white;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 1rem;
+}
+
+.newEntry h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.newEntry h4 {
+  margin: 8px auto;
+  font-style: oblique;
+  font-weight: 100;
+}
+
 .signupLogin {
   height: 60%;
 }

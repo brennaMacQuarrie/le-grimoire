@@ -10,8 +10,6 @@ export default function Field (props) {
     const [bookmarked, isBookmarked] = useState(false);
    
 
-
-
     const addEntry = async e => {
         e.preventDefault();
         console.log('button clicked');
