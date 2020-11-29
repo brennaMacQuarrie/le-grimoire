@@ -1,5 +1,9 @@
-.entryPage {
-    padding: 0 10%;
+.entry {
+    padding-bottom: 0;
+    .entryPage {
+        padding: 0 10%;
+        overflow-y: scroll
+    }
 }
 
 .newEntry {
@@ -16,14 +20,18 @@
     .catDate {
         display: flex;
         justify-content: center;
+        border-bottom: 1px rgba(255, 255, 255, 0.5) solid;
         h4 {
             margin: 8px auto;
             font-style: oblique;
             font-weight: 100;
-            width: 25%;
+            width: 40%;
             margin: 8px 0;
             text-transform: capitalize;
-            text-decoration: underline;
         }
+    }
+    p {
+        width: 80%;
+        text-align: left;
     }
 }

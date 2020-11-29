@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './css/styles.css';
 import Routes from './components/routes';
@@ -10,8 +10,8 @@ import Sidebar from './components/sidebar';
 export default function App() {
   const location = useLocation();
 
-  const [entries, setUserEntries] = useState([]);
-  const [authenticated, setAuthenticated] = useState(false);
+  // const [entries, setUserEntries] = useState([]);
+  // const [authenticated, setAuthenticated] = useState(false);
   const [userId, setUserId] = useState(10);
 
 

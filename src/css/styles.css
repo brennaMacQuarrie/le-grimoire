@@ -536,7 +536,7 @@ button:active {
 }
 
 .entry .inputField #entry {
-  height: 80%;
+  height: 50%;
   font-family: 'Sweet', sans-serif;
   resize: none;
 }
@@ -577,8 +577,13 @@ label {
   margin: 10px 0;
 }
 
-.entryPage {
+.entry {
+  padding-bottom: 0;
+}
+
+.entry .entryPage {
   padding: 0 10%;
+  overflow-y: scroll;
 }
 
 .newEntry {
@@ -602,16 +607,21 @@ label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-bottom: 1px rgba(255, 255, 255, 0.5) solid;
 }
 
 .newEntry .catDate h4 {
   margin: 8px auto;
   font-style: oblique;
   font-weight: 100;
-  width: 25%;
+  width: 40%;
   margin: 8px 0;
   text-transform: capitalize;
-  text-decoration: underline;
+}
+
+.newEntry p {
+  width: 80%;
+  text-align: left;
 }
 
 .signupLogin {

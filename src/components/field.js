@@ -4,20 +4,20 @@ import Button from "./button";
 export default function Field (props) {
     const [title, setTitle] = useState("");
     const [publishedDate, setPublishedDate] = useState("");
-    // TODO get category from h2
-    const [category, setCategory] = useState(props.title);
     const [textEntry, setTextEntry] = useState("");
+    
     const [bookmarked, isBookmarked] = useState(false);
    
 
     const addEntry = async e => {
         e.preventDefault();
-        console.log('button clicked');
+        let payload = { title, publishedDate, textEntry, bookmarked }
+        payload['category'] = props.category;
         try {
             const response = await fetch('http://localhost:3000/entries', {
                 headers: { "Content-Type": "application/json" },
                 method: 'POST',
-                body: JSON.stringify({ title, publishedDate, category, textEntry, bookmarked })
+                body: JSON.stringify(payload)
             }).then((res) => {
                 return res.json();
             }).then((res) => {
@@ -47,7 +47,7 @@ export default function Field (props) {
             </div>
 
             <label htmlFor="entry">Entry</label>
-            <textarea type="text" id="entry" onChange={e => setTextEntry(e.target.value)}></textarea>
+            <textarea type="text" id="entry" onChange={e => setTextEntry(e.target.value)} ></textarea>
 
             <Button addEntry={addEntry} />
         </div>

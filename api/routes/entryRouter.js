@@ -12,13 +12,13 @@ router.get('/', async (req, res) => {
 // add a new entry
 router.post('/', async (req, res) => {
     // destructuring
-    const { title, publishedDate, category, text, bookmarked } = req.body;
+    const { title, publishedDate, category, textEntry, bookmarked } = req.body;
 
     const newEntry = new Entry({
         title: title,
         publishedDate: publishedDate,
         category: category,
-        text: text,
+        textEntry: textEntry,
         bookmarked: bookmarked
     })
     const entry = await newEntry.save();
