@@ -10,8 +10,10 @@ const entrySchema = new Schema({
     },
     category: String, // from page name
     title: String, // from title text
-    textEntry: String,
-    bookmarked: Boolean,  
+    textEntry: {
+        type: String,
+        required: true
+    },
 });
 
 // exporting mongoose model

@@ -12,8 +12,8 @@ export default function Entry({ title, publishedDate, category, textEntry }) {
             <div className="newEntry">
                 <h3>{title}</h3>
                 <div className="catDate">
-                    <h4>{parseDate(publishedDate)}</h4>
-                    <h4>{category}</h4>
+                    <h4>Entry Date: {parseDate(publishedDate)}</h4>
+                    <h4>Subject: {category}</h4>
                 </div>
                 <p>{textEntry}</p>
             </div>

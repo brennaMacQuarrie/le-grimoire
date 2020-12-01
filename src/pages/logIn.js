@@ -8,18 +8,6 @@ export default function LogIn() {
                 <form>
                     
                     <div className="col">
-                        <label htmlFor="username">User Name</label>
-                        <input
-                            name="username"
-                            type="text"
-                            id="username"
-                            required
-                            // value={this.state.formData.username}
-                            // onChange={this.handleFormChange}
-                        />
-                    </div>
-                    
-                    <div className="col">
                         <label htmlFor="email">Email Address</label>
                         <input
                             name="email"

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Entry = require('../models/Entry');
+const Entry = require('./Entry');
 
 router.get('/', async (req, res) => {
     // go get this from the entryRouter??? where is it coming from?

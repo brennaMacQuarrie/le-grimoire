@@ -1,8 +1,8 @@
 const express = require('express');
 
 // importing my routes... 
-const entryRouter = require('./api/routes/entryRouter');
-const userRouter = require('./api/routes/userRouter');
+const entryRouter = require('./api/routes//entries/entryRouter');
+const userRouter = require('./api/routes/users/userRouter');
 
 const app = express();
 
