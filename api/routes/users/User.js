@@ -17,10 +17,6 @@ const userSchema = new Schema({
         required: true,
         unique: true
     },
-    entries: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Entry', // find the entries associated with the user
-    }]
 });
 
 
