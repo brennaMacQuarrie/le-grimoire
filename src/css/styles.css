@@ -297,6 +297,7 @@ body {
   background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
+  background-position: center;
   font-size: 1.5rem;
 }
 
@@ -587,7 +588,7 @@ label {
 }
 
 .newEntry {
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 10px;
   margin-bottom: 20px;
   width: 100%;
@@ -692,14 +693,23 @@ label {
   .menu.active {
     width: 50%;
   }
+  .homeLink {
+    display: none;
+  }
   .homePage,
   .entry {
-    width: 100vw;
-    height: 98vh;
+    width: 80vw;
+    height: 97vh;
     padding: 50px 20px;
   }
   .reOpen {
-    font-size: 1.7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.6rem;
     right: 0;
     top: 0;
   }
@@ -709,8 +719,8 @@ label {
 @media (max-width: 650px) {
   .menu.active {
     width: 100%;
-    padding: 20px 50px;
-    background: rgba(255, 255, 255, 0.6);
+    padding: 20px 52px;
+    background: rgba(255, 255, 255, 0.8);
     text-align: center;
   }
   .menu.active h2 {
@@ -720,6 +730,20 @@ label {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  .homePage,
+  .entry {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+  }
+  h2 {
+    margin: 0;
+  }
+  .entry .inputField {
+    padding: 0;
+    width: 95%;
+  }
   .entry .inputField .flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -732,9 +756,11 @@ label {
   .entry .inputField .flex .col {
     width: 100%;
   }
-  .content,
-  .entryBubble {
-    height: 100%;
+  .entry .entryPage {
+    padding: 0;
+  }
+  .entry .entryPage h2 {
+    margin-bottom: 50px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
