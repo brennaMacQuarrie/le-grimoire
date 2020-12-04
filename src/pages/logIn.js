@@ -1,6 +1,31 @@
+import { useState } from 'react';
 import Background from '../assets/background_flowers2.jpg';
 
-export default function LogIn() {
+export default function LogIn(props) {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = async (e) => {
+        try {
+            e.preventDefault();
+            const response = await fetch('http://localhost:3000/users/login', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error;
+            }
+            props.getUser();
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+
     return (
         <div className="entry" style={{ backgroundImage: "linear-gradient(black, rgba(0,0,0,0.3)), url(" + Background + ")" }}>
             <div className="entryBubble signupLogin">

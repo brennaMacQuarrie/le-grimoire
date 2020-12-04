@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './css/styles.css';
 import Routes from './components/routes';
@@ -12,13 +12,31 @@ export default function App() {
 
   // const [entries, setUserEntries] = useState([]);
   // const [authenticated, setAuthenticated] = useState(false);
-  const [userId, setUserId] = useState(10);
+  const [userId, setUserId] = useState(undefined);
 
 
   // for sidebar open
   const [viewSidebar, setViewSidebar] = useState(false); 
   const toggleSidebar = () => setViewSidebar(!viewSidebar);
 
+  const getUser = useCallback(async function() {
+    try {
+      const response = await fetch('http://localhost:3000/users/me');
+      const json = await response.json();
+      if (!response.ok) {
+        throw new Error;
+      }
+      setUserId(json.data);
+    } catch (err) {
+      console.log('error');
+      setUserId(undefined);
+      console.log({ err });
+    }
+  }, [])
+
+  useEffect(() => {
+    getUser();
+  }, [getUser])
 
   return (
     <div className="App">
@@ -29,7 +47,9 @@ export default function App() {
       }
 
       <Routes viewMenu={viewSidebar}
-              toggleMenu={toggleSidebar} />
+              toggleMenu={toggleSidebar}
+              getUser={getUser}
+              updateUser={setUserId} />
 
       <Sidebar view={viewSidebar} 
               toggleMenu={toggleSidebar} />

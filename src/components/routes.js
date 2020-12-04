@@ -38,9 +38,9 @@ export default function Routes(props) {
             <Route path="/entries"
                 render={() => <Entries />}
             />
-            <Route path="/signUp" component={SignUp} />
+            <Route path="/signUp" component={SignUp} getUser={props.getUser} updateUser={props.setUserId} />
 
-            <Route path="/logIn" component={LogIn} />
+            <Route path="/logIn" component={LogIn} getUser={props.getUser} />
 
             {/* HOMEPAGE */}
             <Route path="/"

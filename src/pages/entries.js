@@ -21,9 +21,9 @@ export default function Entries() {
         }
     }, []);
 
-    useEffect(() => {
-        refreshEntries();
-    }, [refreshEntries]);
+    // useEffect(() => {
+    //     refreshEntries();
+    // }, [refreshEntries]);
 
 
     return (
