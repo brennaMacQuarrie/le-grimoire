@@ -39,8 +39,7 @@ export default function LogIn(props) {
                             type="email"
                             id="email"
                             required
-                            // value={this.state.formData.email}
-                            // onChange={this.handleFormChange}
+                            onChange={(e) => { setEmail(e.target.value); }}
                         />
                     </div>
 
@@ -51,15 +50,13 @@ export default function LogIn(props) {
                             type="password"
                             id="password"
                             required
-                            // value={this.state.formData.password}
-                            // onChange={this.handleFormChange}
+                            onChange={(e) => { setPassword(e.target.value); }}
                         />
                     </div>
                     
                     <input
                         type="submit"
                         value="Submit"
-                        // disabled={!this.state.valid}
                     />
                 </form>
             </div>

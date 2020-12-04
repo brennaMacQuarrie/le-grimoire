@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router';
+import { Redirect, Route, Switch } from 'react-router';
 import Home from '../pages/home';
 import Astro from '../pages/astro';
 import Symbols from '../pages/symbols';
@@ -38,9 +38,22 @@ export default function Routes(props) {
             <Route path="/entries"
                 render={() => <Entries />}
             />
-            <Route path="/signUp" component={SignUp} getUser={props.getUser} updateUser={props.setUserId} />
+{/* >>>>>>>>>>>>>.NEW CODE >>>>>>>>>>>>>>>> */}
+            <Route path="/signUp" getUser={props.getUser} updateUser={props.setUserId} render={props => {
+                if (props.user) {
+                    return <Redirect to="/" />;
+                }
+                return <SignUp getUser={props.getUser} updateUser={props.updateUser} {...props} />;
+            }}/>
 
-            <Route path="/logIn" component={LogIn} getUser={props.getUser} />
+            <Route path="/logIn" getUser={props.getUser} render={props => {
+                if (props.user) {
+                    return <Redirect to="/" />;
+                }
+
+                return <LogIn getUser={props.getUser} {...props} />;
+            }}
+            />
 
             {/* HOMEPAGE */}
             <Route path="/"

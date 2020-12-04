@@ -59,22 +59,24 @@ export default function SignUp(props) {
                 <form>
 
                     <div className="col">
-                        <label htmlFor="username">User Name</label>
+                        <label htmlFor="username">Choose User Name</label>
                         <input
                             name="username"
                             type="text"
                             id="username"
                             required
+                            onChange={(e) => { setName(e.target.value); }}
                         />
                     </div>
 
                     <div className="col">
-                        <label htmlFor="email">Email Address</label>
+                        <label htmlFor="email">Enter Your Email Address</label>
                         <input
                             name="email"
                             type="email"
                             id="email"
                             required
+                            onChange={(e) => { setEmail(e.target.value); }}
                         />
                     </div>
 
@@ -85,6 +87,7 @@ export default function SignUp(props) {
                             type="password"
                             id="password"
                             required
+                            onChange={(e) => { setPassword(e.target.value); }}
                         />
                     </div>
 
