@@ -93,7 +93,7 @@ export default function SignUp(props) {
 
                     <input
                         type="submit"
-                        value="Submit"
+                        value="Sign Up"
                     />
                 </form>
             </div>

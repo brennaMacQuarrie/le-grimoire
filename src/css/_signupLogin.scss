@@ -19,9 +19,6 @@
             font-size: 1rem;
         }
         input[type=submit] {
-            background: transparent;
-            margin: 10px auto;
-            font-style: normal;
             @include color($hoverText);
         }
     }

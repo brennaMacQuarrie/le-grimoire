@@ -1,4 +1,4 @@
-// TODO make roses
+// TODO make into roses
 .homeLink,
 .reOpen {
   font-size: 1.3rem;
@@ -20,12 +20,25 @@
 }
 
 .homeLink {
-    font-size: 1rem;
-    top: 10px;
-    text-decoration: none;
-    padding: 0 10px;
-    &:hover,
-    &:focus {
-        transform: scale(1.2);
-    }
+  top: 10px;
+  right: 10px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px rgba(255, 255, 255, 0.6) solid;
+  &:hover,
+  &:focus {
+      color: black;
+      background-color: white;
+      transform: translateX(0px);
+  }
+}
+
+
+.goToSignUp {
+  color: white;
+  text-decoration: none;
+  border-bottom: white 1px dotted;
+  font-size: 0.8rem;
+  text-shadow: 2px 2px 4px black;
 }

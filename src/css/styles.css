@@ -276,15 +276,27 @@ body {
 }
 
 .homeLink {
-  font-size: 1rem;
   top: 10px;
+  right: 10px;
+  font-size: 0.9rem;
   text-decoration: none;
-  padding: 0 10px;
+  padding: 5px 10px;
+  border: 1px rgba(255, 255, 255, 0.6) solid;
 }
 
 .homeLink:hover, .homeLink:focus {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  color: black;
+  background-color: white;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.goToSignUp {
+  color: white;
+  text-decoration: none;
+  border-bottom: white 1px dotted;
+  font-size: 0.8rem;
+  text-shadow: 2px 2px 4px black;
 }
 
 .homePage,
@@ -326,7 +338,7 @@ button {
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid white;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 2px 2px 2.5px black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   color: white;
@@ -399,7 +411,7 @@ button:active {
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid white;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 2px 2px 2.5px black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   color: white;
@@ -428,6 +440,8 @@ button:active {
           justify-content: space-between;
   padding: 0;
   border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   text-align: center;
   background: transparent;
 }
@@ -557,7 +571,7 @@ button:active {
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid white;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 2px 2px 2.5px black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   color: white;
@@ -662,16 +676,13 @@ label {
 }
 
 .signupLogin form input[type=submit] {
-  background: transparent;
-  margin: 10px auto;
-  font-style: normal;
   font-family: 'Sweet', sans-serif;
   border: none;
   padding: 3px 25px;
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid white;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 2px 2px 2.5px black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   color: white;
@@ -699,9 +710,15 @@ label {
     padding: 50px 20px;
   }
   .reOpen {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     right: 0;
     top: 0;
+  }
+  .homeLink {
+    left: 0px;
+    top: 25px;
+    right: unset;
+    border: none;
   }
 }
 

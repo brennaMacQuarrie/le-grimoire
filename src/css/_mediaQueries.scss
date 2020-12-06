@@ -18,10 +18,18 @@
         height: 98vh;
         padding: 50px 20px;
     }
+
+    // move buttons
     .reOpen {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         right: 0;
         top: 0;
+    }
+    .homeLink {
+        left: 0px;
+        top: 25px;
+        right: unset;
+        border: none;
     }
 }
 // TODO on click close menu!!! not just on button click

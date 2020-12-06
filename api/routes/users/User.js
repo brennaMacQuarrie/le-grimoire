@@ -29,8 +29,8 @@ userSchema.pre('save', async function(next) {
             user.password = encryptedPassword;
         }
         next();
-    } catch(ex) {
-        next(ex);
+    } catch(err) {
+        next(err);
     }
 });
 
@@ -43,4 +43,3 @@ const User = mongoose.model('User', userSchema);
 
 module.exports = User;
 
-// look up jwt tokens?

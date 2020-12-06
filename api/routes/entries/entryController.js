@@ -3,8 +3,8 @@ const Entries = require('./Entry');
 exports.getEntriesByUser = async (userId) => {
     try {
         const entries = await Entries
-            .find({ user: userId })
-            .populate({ path: user, select: 'name' });
+            .find({ author: userId })
+            .populate({ path: 'author', select: 'name' });
         return entries;
     } catch(err) {
         throw err;
@@ -25,7 +25,7 @@ exports.getEntryById = async (id) => {
     try {
         const entry = await Entries 
             .findById(id)
-            .populate({ path: 'user', select: 'name' });
+            .populate({ path: 'author', select: 'name' });
         return entry;
     } catch(err) {
         throw err;

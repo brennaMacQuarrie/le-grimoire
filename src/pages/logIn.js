@@ -56,8 +56,9 @@ export default function LogIn(props) {
                     
                     <input
                         type="submit"
-                        value="Submit"
+                        value="Log In"
                     />
+                    <a className="goToSignUp" href="/signUp">Don't have an account? Sign up here</a>
                 </form>
             </div>
         </div>

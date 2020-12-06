@@ -6,15 +6,20 @@ const { verifyToken } = require('../../middleware/verifyToken');
 const router = express.Router();
 
 // import User mongoose model (schema?)
+// TODO do i need these??
 const User = require('./User'); 
 // to use in the 'entries'??
 const Entry = require('../entries/Entry');
 
 
-
+// TODO do i need this  /get  ?
 router.route('/')
+.get(async (req, res) => {
+    const users = await User.find();
+    res.json(users);
+})
 .post(async (req, res) => {
-    const { name, email, password, entries } = req.body;
+    const { name, email, password } = req.body;
     if (!name || name === ' ') {
         res.status(400).json({ message: 'name must be provided' });
         return;
@@ -35,13 +40,15 @@ router.route('/')
             return;
         }
 
-        const user = await createUser({ name, email, password, entries });
+        const user = await createUser({ name, email, password });
         res.json({ data: user._id });
     } catch(err) {
         console.log(err);
         res.status(500).json({ message: 'internal server error' });
     }
 });
+
+
 
 
 router.route('/login')
@@ -60,7 +67,7 @@ router.route('/login')
         //  user exists??
         const user = await findUserByEmail(email);
         if (!user) {
-            res.status(400).json({ message: 'password and email do not match' });
+            res.status(401).json({ message: 'password and email do not match' });
             return;
         }
 
@@ -75,9 +82,9 @@ router.route('/login')
         const token = createToken({ id: user._id });
         // save token in cookie
         res.cookie('token', token);
-        res.status(200).send({});
-    } catch(ex) {
-        console.log(ex);
+        res.status(200).send({ message: 'BOOYAH' });
+    } catch(err) {
+        console.log(err);
         res.status(500).json({ message: 'internal server error' });
     }
 })
@@ -94,14 +101,6 @@ router.use(verifyToken).route('/me')
     }
 });
  
-// retreive this info asyncronously
-router.get('/', async (req, res) => {
-    // save in a variable, the User schema, or multiples?
-    // when is it a single user model and when is it the full body?
-    const users = await User.find();
-    res.json(users);
-})
-
 
 
 
