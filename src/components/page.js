@@ -1,5 +1,5 @@
 import Background from '../assets/background_flowers2.jpg';
-import Field from './field';
+import Field from './Field';
 
 
 export default function Page(props) {

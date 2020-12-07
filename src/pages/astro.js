@@ -1,6 +1,6 @@
-import Page from '../components/page';
+import Page from '../components/Page';
 
-export default function Astro(props) {
+export default function Astro() {
     return (
        <Page title="Astrological Observations" />
     )

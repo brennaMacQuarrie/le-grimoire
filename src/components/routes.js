@@ -1,15 +1,15 @@
 import { Redirect, Route, Switch } from 'react-router';
-import Home from '../pages/home';
-import Astro from '../pages/astro';
-import Symbols from '../pages/symbols';
-import Tarot from '../pages/tarot';
-import Crystals from '../pages/crystals';
-import Rituals from '../pages/rituals';
-import Spells from '../pages/spells';
-import Herbs from '../pages/herbs';
-import Entries from '../pages/entries';
-import LogIn from '../pages/logIn';
-import SignUp from '../pages/signUp';
+import Home from '../pages/Home';
+import Astro from '../pages/Astro';
+import Symbols from '../pages/Symbols';
+import Tarot from '../pages/Tarot';
+import Crystals from '../pages/Crystals';
+import Rituals from '../pages/Rituals';
+import Spells from '../pages/Spells';
+import Herbs from '../pages/Herbs';
+import Entries from '../pages/Entries';
+import LogIn from '../pages/LogIn';
+import SignUp from '../pages/SignUp';
 
 export default function Routes(props) {
     const { getUser, updateUser, me } = props;

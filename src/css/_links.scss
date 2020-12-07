@@ -19,6 +19,29 @@
   }
 }
 
+a.button,
+button {
+  @include color($hoverText);
+  text-shadow: none;
+  font-weight: 300;
+}
+
+.button,
+.signUp {
+  border: none;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: 0.8s all;
+  box-shadow: none;
+  &:hover,
+  &:focus {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+  }
+}
+
 .homeLink {
   top: 10px;
   right: 10px;

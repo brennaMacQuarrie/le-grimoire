@@ -15,7 +15,10 @@ export default function Home({viewMenu, toggleMenu, me}) {
                 <div className="actions">
                     {
                         me ? (
-                            <button onClick={toggleMenu}>{viewMenu ? `Close` : `Make an Entry`}</button>
+                            <> 
+                                <button onClick={toggleMenu}>{viewMenu ? `Close` : `Make an Entry`}</button>
+                                <button className="link signUp">Log Out</button>
+                            </>
                             ) : 
                             (
                             <> 

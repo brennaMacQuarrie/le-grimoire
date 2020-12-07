@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import Button from "./button";
+import Button from "./Button";
 
 export default function Field (props) {
-    const [title, setTitle] = useState("");
-    const [publishedDate, setPublishedDate] = useState("");
-    const [text, setText] = useState("");
+    const [title, setTitle] = useState('');
+    const [publishedDate, setPublishedDate] = useState('');
+    const [text, setText] = useState('');
     
     const [bookmarked, isBookmarked] = useState(false);
    
@@ -23,7 +23,10 @@ export default function Field (props) {
             }).then((res) => {
                 console.log("res", res);
             });
-
+            // TODO reset all fields on submit
+            setTitle('');
+            setText('');
+            setPublishedDate('');
         } catch (e) {
             console.log(e);
         }

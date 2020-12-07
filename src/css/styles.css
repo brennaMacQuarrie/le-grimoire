@@ -275,6 +275,53 @@ body {
   color: white;
 }
 
+a.button,
+button {
+  font-family: 'Sweet', sans-serif;
+  border: none;
+  padding: 3px 25px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
+  text-shadow: 1px 1px 2px black;
+  -webkit-box-shadow: 1px 1px 5px black;
+          box-shadow: 1px 1px 5px black;
+  color: white;
+  font-weight: 600;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  text-shadow: none;
+  font-weight: 300;
+}
+
+a.button:hover, a.button:active,
+button:hover,
+button:active {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  text-shadow: none;
+}
+
+.button,
+.signUp {
+  border: none;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  -webkit-transition: 0.8s all;
+  transition: 0.8s all;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.button:hover, .button:focus,
+.signUp:hover,
+.signUp:focus {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
 .homeLink {
   top: 10px;
   right: 10px;
@@ -328,51 +375,6 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-a.button,
-button {
-  font-family: 'Sweet', sans-serif;
-  border: none;
-  padding: 3px 25px;
-  margin-top: 20px;
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid white;
-  text-shadow: 1px 1px 2px black;
-  -webkit-box-shadow: 1px 1px 5px black;
-          box-shadow: 1px 1px 5px black;
-  color: white;
-  font-weight: 600;
-  -webkit-transition: all 0.7s;
-  transition: all 0.7s;
-  text-shadow: none;
-  font-weight: 300;
-}
-
-a.button:hover, a.button:active,
-button:hover,
-button:active {
-  background: rgba(255, 255, 255, 0.9);
-  color: black;
-  text-shadow: none;
-}
-
-.button,
-.signUp {
-  border: none;
-  background: transparent;
-  color: white;
-  text-decoration: none;
-  padding: 5px 0;
-  -webkit-transition: 0.8s all;
-  transition: 0.8s all;
-}
-
-.button:hover, .button:focus,
-.signUp:hover,
-.signUp:focus {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
 }
 
 .menu {
@@ -603,13 +605,14 @@ label {
 }
 
 .newEntry {
-  border: 2px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.562);
   padding: 10px 40px;
   margin-bottom: 20px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.719);
   font-size: 1rem;
-  color: black;
+  color: white;
+  overflow-x: scroll;
 }
 
 .newEntry h3 {
@@ -623,7 +626,7 @@ label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 1px white solid;
+  border-bottom: 1px rgba(255, 255, 255, 0.562) solid;
 }
 
 .newEntry .catDate h4 {
@@ -632,7 +635,6 @@ label {
   font-weight: 100;
   width: 50%;
   margin: 8px 0;
-  text-transform: uppercase;
 }
 
 .newEntry p {
