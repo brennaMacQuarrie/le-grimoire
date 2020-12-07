@@ -36,7 +36,7 @@ router.route('/')
     try {
         const foundUser = await findUserByEmail(email);
         if (foundUser) {
-            res.status(400),json({ message: `email ${email} already exists` });
+            res.status(400).json({ message: `email ${email} already exists` });
             return;
         }
 

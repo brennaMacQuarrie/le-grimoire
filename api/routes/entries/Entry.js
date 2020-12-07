@@ -15,7 +15,7 @@ const entrySchema = new Schema({
         default: Date.now(),
     },
     category: String, // from page name
-    textEntry: {
+    text: {
         type: String,
         required: true
     },

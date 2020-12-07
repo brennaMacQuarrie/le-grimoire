@@ -24,7 +24,7 @@ export default function App() {
       if (!response.ok) {
         throw new Error(json.message);
       }
-
+      // console.log(json.data); << object w id, name, email
       setUserId(json.data);
     } catch (err) {
       console.log('error     %%%:', err);
@@ -48,7 +48,8 @@ export default function App() {
       <Routes viewMenu={viewSidebar}
               toggleMenu={toggleSidebar}
               getUser={getUser}
-              updateUser={setUserId} />
+              updateUser={setUserId} 
+              me={userId} />
 
       <Sidebar view={viewSidebar} 
               toggleMenu={toggleSidebar} />

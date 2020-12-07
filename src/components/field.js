@@ -4,14 +4,14 @@ import Button from "./button";
 export default function Field (props) {
     const [title, setTitle] = useState("");
     const [publishedDate, setPublishedDate] = useState("");
-    const [textEntry, setTextEntry] = useState("");
+    const [text, setText] = useState("");
     
     const [bookmarked, isBookmarked] = useState(false);
    
 
     const addEntry = async e => {
         e.preventDefault();
-        let payload = { title, publishedDate, textEntry, bookmarked }
+        let payload = { title, publishedDate, text, bookmarked }
         payload['category'] = props.category;
         try {
             const response = await fetch('http://localhost:3000/entries', {
@@ -23,6 +23,7 @@ export default function Field (props) {
             }).then((res) => {
                 console.log("res", res);
             });
+
         } catch (e) {
             console.log(e);
         }
@@ -40,14 +41,13 @@ export default function Field (props) {
 
                 <div className="col">
                     <label htmlFor="date">Date</label>
-                    {/* TODO change date requirements */}
                     <input type="date" id="date" name="entry date" onChange={e => setPublishedDate(e.target.value)} />
                 </div>
 
             </div>
 
             <label htmlFor="entry">Entry</label>
-            <textarea type="text" id="entry" onChange={e => setTextEntry(e.target.value)} ></textarea>
+            <textarea type="text" id="entry" onChange={e => setText(e.target.value)} ></textarea>
 
             <Button addEntry={addEntry} />
         </div>

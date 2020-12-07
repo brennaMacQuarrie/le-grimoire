@@ -12,6 +12,7 @@ import LogIn from '../pages/logIn';
 import SignUp from '../pages/signUp';
 
 export default function Routes(props) {
+    const { getUser, updateUser, me } = props;
     return (
         <Switch>
             <Route path="/astro"
@@ -39,16 +40,16 @@ export default function Routes(props) {
                 render={() => <Entries />}
             />
 {/* >>>>>>>>>>>>>.NEW CODE >>>>>>>>>>>>>>>> */}
-            <Route path="/signUp" getUser={props.getUser} updateUser={props.setUserId} render={props => {
-                if (props.user) {
-                    return <Redirect to="/" />;
+            <Route path="/signUp" render={props => {
+                if (me) {
+                    return <Redirect to="/entries" />;
                 }
-                return <SignUp getUser={props.getUser} updateUser={props.updateUser} {...props} />;
+                return <SignUp getUser={getUser} updateUser={updateUser} {...props} />;
             }}/>
 
-            <Route path="/logIn" getUser={props.getUser} render={props => {
-                if (props.user) {
-                    return <Redirect to="/" />;
+            <Route path="/logIn" render={props => {
+                if (me) {
+                    return <Redirect to="/entries" />;
                 }
 
                 return <LogIn getUser={props.getUser} {...props} />;
@@ -57,7 +58,7 @@ export default function Routes(props) {
 
             {/* HOMEPAGE */}
             <Route path="/"
-                render={() => <Home viewMenu={props.viewMenu}
+                render={() => <Home viewMenu={props.viewMenu} me={me}
                     toggleMenu={props.toggleMenu} />}
             />
         </Switch>

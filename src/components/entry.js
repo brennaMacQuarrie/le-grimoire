@@ -1,5 +1,5 @@
 
-export default function Entry({ title, publishedDate, category, textEntry }) {
+export default function Entry({ title, publishedDate, category, text }) {
 
     const parseDate = (publishedDate) => {
         let date = new Date(publishedDate);
@@ -15,7 +15,7 @@ export default function Entry({ title, publishedDate, category, textEntry }) {
                     <h4>Entry Date: {parseDate(publishedDate)}</h4>
                     <h4>Subject: {category}</h4>
                 </div>
-                <p>{textEntry}</p>
+                <p>{text}</p>
             </div>
         </div>
     )

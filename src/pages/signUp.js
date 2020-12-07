@@ -14,8 +14,8 @@ export default function SignUp(props) {
                 password,
                 name
             };
-
-            const response = await fetch('http://localhost:3000/users/login', {
+            // create the user
+            const response = await fetch('http://localhost:3000/users', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export default function SignUp(props) {
             if (!response.ok) {
                 throw new Error(data.message); 
             }
-
+            // log them in
             const loginResponse = await fetch('http://localhost:3000/users/login', {
                 method: "POST",
                 headers: {
@@ -38,7 +38,7 @@ export default function SignUp(props) {
             if(!loginResponse.ok) {
                 throw new Error;
             }
-
+            // get their INFO
             props.getUser();
         } catch (err) {
             console.log(err);
@@ -56,7 +56,7 @@ export default function SignUp(props) {
         <div className="entry" style={{ backgroundImage: "linear-gradient(black, rgba(0,0,0,0.3)), url(" + Background + ")" }}>
             <div className="entryBubble signupLogin">
                 <h2>Sign Up</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
 
                     <div className="col">
                         <label htmlFor="username">Choose User Name</label>

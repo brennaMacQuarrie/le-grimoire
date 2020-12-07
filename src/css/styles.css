@@ -336,9 +336,9 @@ button {
   border: none;
   padding: 3px 25px;
   margin-top: 20px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   border: 1px solid white;
-  text-shadow: 2px 2px 2.5px black;
+  text-shadow: 1px 1px 2px black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   color: white;
@@ -352,7 +352,7 @@ button {
 a.button:hover, a.button:active,
 button:hover,
 button:active {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   color: black;
   text-shadow: none;
 }
@@ -391,14 +391,14 @@ button:active {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: left;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .menu h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 4%;
-  background: rgba(0, 0, 0, 0.8);
+  background: black;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
@@ -409,9 +409,9 @@ button:active {
   border: none;
   padding: 3px 25px;
   margin-top: 20px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   border: 1px solid white;
-  text-shadow: 2px 2px 2.5px black;
+  text-shadow: 1px 1px 2px black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   color: white;
@@ -426,7 +426,7 @@ button:active {
 }
 
 .menu .link:hover, .menu .link:active {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   color: black;
   text-shadow: none;
 }
@@ -462,6 +462,8 @@ button:active {
 
 .menu.inactive {
   right: -500px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .reOpen.inactive {
@@ -569,9 +571,9 @@ button:active {
   border: none;
   padding: 3px 25px;
   margin-top: 20px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   border: 1px solid white;
-  text-shadow: 2px 2px 2.5px black;
+  text-shadow: 1px 1px 2px black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   color: white;
@@ -582,7 +584,7 @@ button:active {
 }
 
 .submitDiv .submitButton:hover, .submitDiv .submitButton:active {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   color: black;
   text-shadow: none;
 }
@@ -680,9 +682,9 @@ label {
   border: none;
   padding: 3px 25px;
   margin-top: 20px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   border: 1px solid white;
-  text-shadow: 2px 2px 2.5px black;
+  text-shadow: 1px 1px 2px black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   color: white;
@@ -692,7 +694,7 @@ label {
 }
 
 .signupLogin form input[type=submit]:hover, .signupLogin form input[type=submit]:active {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   color: black;
   text-shadow: none;
 }
@@ -726,7 +728,7 @@ label {
 @media (max-width: 650px) {
   .menu.active {
     width: 100%;
-    padding: 20px 50px;
+    padding: 0 20px;
     background: rgba(255, 255, 255, 0.6);
     text-align: center;
   }

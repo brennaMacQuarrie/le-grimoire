@@ -4,7 +4,7 @@ import '../css/styles.css';
 import Background from '../assets/Feb26_BloomGeneration-2322.jpg';
 
 
-export default function Home({viewMenu, toggleMenu}) {
+export default function Home({viewMenu, toggleMenu, me}) {
 
     return (
         <div className="homePage" 
@@ -13,10 +13,18 @@ export default function Home({viewMenu, toggleMenu}) {
             <div className="content">
                 <h1>le grimoire</h1>
                 <div className="actions">
-                    <Link className="link signUp" to='/signUp'>Sign Up</Link>
-                    <Link className="link button" to='/logIn'>Log In</Link>
+                    {
+                        me ? (
+                            <button onClick={toggleMenu}>{viewMenu ? `Close` : `Make an Entry`}</button>
+                            ) : 
+                            (
+                            <> 
+                                <Link className="link signUp" to='/signUp'>Sign Up</Link>
+                                <Link className="link button" to='/logIn'>Log In</Link>
+                            </>
+                            )
+                    }
                
-                    <button menuClose={viewMenu} onClick={toggleMenu}>{viewMenu ? `Close` : `Enter`}</button>
                 </div>
             </div>
 

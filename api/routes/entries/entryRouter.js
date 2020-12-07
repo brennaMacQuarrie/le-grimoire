@@ -25,10 +25,13 @@ router.route('/')
         const { body } = req;
         if (!body.text || body.text ===' ') {
             res.status(400).json({ message: 'text must be provided' });
+            return;
         }
         const newEntry = {
             text: body.text,
-            author: user.id,
+            author: req.user.id,
+            title: body.title,
+            category: body.category
         }
         const id = await createEntry(newEntry)
         res.json({ data: { id } });
