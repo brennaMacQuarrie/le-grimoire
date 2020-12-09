@@ -1,9 +1,9 @@
-import { Route, Switch } from 'react-router';
-import Home from '../pages/home';
-import Astro from '../pages/astro';
-import Symbols from '../pages/symbols';
-import Tarot from '../pages/tarot';
-import Crystals from '../pages/crystals';
+import { Redirect, Route, Switch } from 'react-router';
+import Home from '../pages/home'; 
+import Astro from '../pages/Astro'; 
+import Symbols from '../pages/symbols'; 
+import Tarot from '../pages/tarot'; 
+import Crystals from '../pages/crystals'; 
 import Rituals from '../pages/rituals';
 import Spells from '../pages/spells';
 import Herbs from '../pages/herbs';
@@ -12,6 +12,7 @@ import LogIn from '../pages/logIn';
 import SignUp from '../pages/signUp';
 
 export default function Routes(props) {
+    const { getUser, updateUser, me } = props;
     return (
         <Switch>
             <Route path="/astro"
@@ -38,13 +39,26 @@ export default function Routes(props) {
             <Route path="/entries"
                 render={() => <Entries />}
             />
-            <Route path="/signUp" component={SignUp} />
+{/* >>>>>>>>>>>>>.NEW CODE >>>>>>>>>>>>>>>> */}
+            <Route path="/signUp" render={props => {
+                if (me) {
+                    return <Redirect to="/entries" />;
+                }
+                return <SignUp getUser={getUser} updateUser={updateUser} {...props} />;
+            }}/>
 
-            <Route path="/logIn" component={LogIn} />
+            <Route path="/logIn" render={props => {
+                if (me) {
+                    return <Redirect to="/entries" />;
+                }
+
+                return <LogIn getUser={props.getUser} {...props} />;
+            }}
+            />
 
             {/* HOMEPAGE */}
             <Route path="/"
-                render={() => <Home viewMenu={props.viewMenu}
+                render={() => <Home viewMenu={props.viewMenu} me={me}
                     toggleMenu={props.toggleMenu} />}
             />
         </Switch>

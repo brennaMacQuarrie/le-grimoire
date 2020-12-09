@@ -1,4 +1,3 @@
-
 .homePage,
 .entry {
   border: 1px solid white;
@@ -20,28 +19,3 @@
     }
   }
 }
-
-
-a.button,
-button {
-  @include color($hoverText);
-  text-shadow: none;
-  font-weight: 300;
-}
-
-.button,
-.signUp {
-  border: none;
-  background: transparent;
-  color: white;
-  text-decoration: none;
-  padding: 5px 0;
-  transition: 0.8s all;
-  &:hover,
-  &:focus {
-    background: rgba(255, 255, 255, 0.3);
-    color: white;
-  }
-}
-
-

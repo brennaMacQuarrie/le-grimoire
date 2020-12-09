@@ -7,31 +7,31 @@
 }
 
 .newEntry {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 10px;
+    border: 1px solid $offWhite;
+    padding: 10px 40px;
     margin-bottom: 20px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.719);
     font-size: 1rem;
+    color: white;
+    overflow-x: scroll;
     h3 {
-        font-size: 1.5rem;
-        margin: 0;
+        font-size: 1.3rem;
     }
     .catDate {
         display: flex;
         justify-content: center;
-        border-bottom: 1px rgba(255, 255, 255, 0.5) solid;
+        border-bottom: 1px $offWhite solid;
         h4 {
             margin: 8px auto;
             font-style: oblique;
             font-weight: 100;
-            width: 40%;
+            width: 50%;
             margin: 8px 0;
-            text-transform: capitalize;
         }
     }
     p {
-        width: 80%;
         text-align: left;
+        line-height: 120%;
     }
 }

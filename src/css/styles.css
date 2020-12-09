@@ -275,16 +275,75 @@ body {
   color: white;
 }
 
-.homeLink {
-  font-size: 1rem;
-  top: 10px;
+a.button,
+button {
+  font-family: 'Sweet', sans-serif;
+  border: none;
+  padding: 3px 25px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
+  text-shadow: 1px 1px 2px black;
+  -webkit-box-shadow: 1px 1px 5px black;
+          box-shadow: 1px 1px 5px black;
+  color: white;
+  font-weight: 600;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  text-shadow: none;
+  font-weight: 300;
+}
+
+a.button:hover, a.button:active,
+button:hover,
+button:active {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  text-shadow: none;
+}
+
+.button,
+.signUp {
+  border: none;
+  background: transparent;
+  color: white;
   text-decoration: none;
-  padding: 0 10px;
+  padding: 5px 0;
+  -webkit-transition: 0.8s all;
+  transition: 0.8s all;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.button:hover, .button:focus,
+.signUp:hover,
+.signUp:focus {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.homeLink {
+  top: 10px;
+  right: 10px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px rgba(255, 255, 255, 0.6) solid;
 }
 
 .homeLink:hover, .homeLink:focus {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  color: black;
+  background-color: white;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.goToSignUp {
+  color: white;
+  text-decoration: none;
+  border-bottom: white 1px dotted;
+  font-size: 0.8rem;
+  text-shadow: 2px 2px 4px black;
 }
 
 .homePage,
@@ -297,7 +356,6 @@ body {
   background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-position: center;
   font-size: 1.5rem;
 }
 
@@ -319,51 +377,6 @@ body {
       justify-content: space-around;
 }
 
-a.button,
-button {
-  font-family: 'Sweet', sans-serif;
-  border: none;
-  padding: 3px 25px;
-  margin-top: 20px;
-  background: rgba(255, 255, 255, 0.4);
-  border: 1px solid white;
-  text-shadow: 2px 2px 3px black;
-  -webkit-box-shadow: 1px 1px 5px black;
-          box-shadow: 1px 1px 5px black;
-  color: white;
-  font-weight: 600;
-  -webkit-transition: all 0.7s;
-  transition: all 0.7s;
-  text-shadow: none;
-  font-weight: 300;
-}
-
-a.button:hover, a.button:active,
-button:hover,
-button:active {
-  background: rgba(255, 255, 255, 0.7);
-  color: black;
-  text-shadow: none;
-}
-
-.button,
-.signUp {
-  border: none;
-  background: transparent;
-  color: white;
-  text-decoration: none;
-  padding: 5px 0;
-  -webkit-transition: 0.8s all;
-  transition: 0.8s all;
-}
-
-.button:hover, .button:focus,
-.signUp:hover,
-.signUp:focus {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
-}
-
 .menu {
   width: 28%;
   height: 100vh;
@@ -380,14 +393,14 @@ button:active {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: left;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .menu h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 4%;
-  background: rgba(0, 0, 0, 0.8);
+  background: black;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
@@ -398,9 +411,9 @@ button:active {
   border: none;
   padding: 3px 25px;
   margin-top: 20px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   border: 1px solid white;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 1px 1px 2px black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   color: white;
@@ -415,7 +428,7 @@ button:active {
 }
 
 .menu .link:hover, .menu .link:active {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   color: black;
   text-shadow: none;
 }
@@ -429,6 +442,8 @@ button:active {
           justify-content: space-between;
   padding: 0;
   border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   text-align: center;
   background: transparent;
 }
@@ -449,6 +464,8 @@ button:active {
 
 .menu.inactive {
   right: -500px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .reOpen.inactive {
@@ -556,9 +573,9 @@ button:active {
   border: none;
   padding: 3px 25px;
   margin-top: 20px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   border: 1px solid white;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 1px 1px 2px black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   color: white;
@@ -569,7 +586,7 @@ button:active {
 }
 
 .submitDiv .submitButton:hover, .submitDiv .submitButton:active {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   color: black;
   text-shadow: none;
 }
@@ -588,17 +605,18 @@ label {
 }
 
 .newEntry {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.562);
+  padding: 10px 40px;
   margin-bottom: 20px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.719);
   font-size: 1rem;
+  color: white;
+  overflow-x: scroll;
 }
 
 .newEntry h3 {
-  font-size: 1.5rem;
-  margin: 0;
+  font-size: 1.3rem;
 }
 
 .newEntry .catDate {
@@ -608,21 +626,20 @@ label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 1px rgba(255, 255, 255, 0.5) solid;
+  border-bottom: 1px rgba(255, 255, 255, 0.562) solid;
 }
 
 .newEntry .catDate h4 {
   margin: 8px auto;
   font-style: oblique;
   font-weight: 100;
-  width: 40%;
+  width: 50%;
   margin: 8px 0;
-  text-transform: capitalize;
 }
 
 .newEntry p {
-  width: 80%;
   text-align: left;
+  line-height: 120%;
 }
 
 .signupLogin {
@@ -663,16 +680,13 @@ label {
 }
 
 .signupLogin form input[type=submit] {
-  background: transparent;
-  margin: 10px auto;
-  font-style: normal;
   font-family: 'Sweet', sans-serif;
   border: none;
   padding: 3px 25px;
   margin-top: 20px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   border: 1px solid white;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 1px 1px 2px black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   color: white;
@@ -682,7 +696,7 @@ label {
 }
 
 .signupLogin form input[type=submit]:hover, .signupLogin form input[type=submit]:active {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   color: black;
   text-shadow: none;
 }
@@ -703,15 +717,15 @@ label {
     padding: 50px 20px;
   }
   .reOpen {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     right: 0;
     top: 0;
+  }
+  .homeLink {
+    left: 0px;
+    top: 25px;
+    right: unset;
+    border: none;
   }
 }
 
@@ -719,8 +733,8 @@ label {
 @media (max-width: 650px) {
   .menu.active {
     width: 100%;
-    padding: 20px 52px;
-    background: rgba(255, 255, 255, 0.8);
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 0.6);
     text-align: center;
   }
   .menu.active h2 {

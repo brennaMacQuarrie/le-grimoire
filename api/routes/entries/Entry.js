@@ -4,14 +4,21 @@ const { Schema } = mongoose;
 
 // build the unique data format
 const entrySchema = new Schema({
+    author: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: 'User',
+    },
+    title: String, // from title text
     publishedDate: {
         type: Date,
-        default: Date.now,
+        default: Date.now(),
     },
     category: String, // from page name
-    title: String, // from title text
-    textEntry: String,
-    bookmarked: Boolean,  
+    text: {
+        type: String,
+        required: true
+    },
 });
 
 // exporting mongoose model

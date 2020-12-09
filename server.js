@@ -1,16 +1,16 @@
 const express = require('express');
 
 // importing my routes... 
-const entryRouter = require('./api/routes/entryRouter');
-const userRouter = require('./api/routes/userRouter');
-
+const entryRouter = require('./api/routes//entries/entryRouter');
+const userRouter = require('./api/routes/users/userRouter');
 const app = express();
-
 // bring in mongoose
 const mongoose = require('mongoose');
 // TODO update on deploy to no longer be local
 // database
 const uri = "mongodb://localhost:27017/legrimoire";
+const cookieParser = require('cookie-parser');
+
 
 // Connect to database
 mongoose
@@ -24,8 +24,8 @@ mongoose
 })
 
 app.use(express.json());
+app.use(cookieParser());
 
-// does this say >> /entries is where to get info for entryRouter?
 app.use('/entries', entryRouter);
 app.use('/users', userRouter);
 
