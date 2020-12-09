@@ -6,6 +6,21 @@ import Background from '../assets/Feb26_BloomGeneration-2322.jpg';
 
 export default function Home({viewMenu, toggleMenu, me}) {
 
+    const handleLogout = async (e) => {
+        try {
+            e.preventDefault();
+            const response = await fetch('http://localhost:3000/users/logout', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
     return (
         <div className="homePage" 
              style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.3), black), url(" + Background + ")" }}>
@@ -17,7 +32,7 @@ export default function Home({viewMenu, toggleMenu, me}) {
                         me ? (
                             <> 
                                 <button onClick={toggleMenu}>{viewMenu ? `Close` : `Make an Entry`}</button>
-                                <button className="link signUp">Log Out</button>
+                                <button onClick={handleLogout} className="link signUp">Log Out</button>
                             </>
                             ) : 
                             (

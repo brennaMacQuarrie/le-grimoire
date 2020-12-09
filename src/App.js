@@ -27,7 +27,7 @@ export default function App() {
       // console.log(json.data); << object w id, name, email
       setUserId(json.data);
     } catch (err) {
-      console.log('error     %%%:', err);
+      console.log('error:', err);
       setUserId(undefined);
     }
   }, [])

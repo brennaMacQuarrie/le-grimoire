@@ -87,7 +87,19 @@ router.route('/login')
         console.log(err);
         res.status(500).json({ message: 'internal server error' });
     }
-})
+});
+
+
+router.route('/logout')
+    .post(async (req, res) => {
+
+        try {
+            res.clearCookie('token', token) // ???
+        } catch (err) {
+            console.log(err);
+            res.status(500).json({ message: 'still gots ur cookie bruv' });
+        }
+    });
 
 
 router.use(verifyToken).route('/me')
