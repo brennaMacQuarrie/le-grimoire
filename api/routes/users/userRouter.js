@@ -6,13 +6,15 @@ const { verifyToken } = require('../../middleware/verifyToken');
 const router = express.Router();
 
 // import User mongoose model (schema?)
-// TODO do i need these??
 const User = require('./User'); 
-// to use in the 'entries'??
+
+
+
+// TODO to use in the 'entries'?? do i need this?
 const Entry = require('../entries/Entry');
 
 
-// TODO do i need this  /get  ?
+
 router.route('/')
 .get(async (req, res) => {
     const users = await User.find();
@@ -92,11 +94,12 @@ router.route('/login')
 
 router.route('/logout')
     .post(async (req, res) => {
-
         try {
-            res.clearCookie('token', token) // ???
+            res.clearCookie('token') // ???
+            console.log('logout post');
+            res.sendStatus(200);
         } catch (err) {
-            console.log(err);
+            console.log('cookie error:', err);
             res.status(500).json({ message: 'still gots ur cookie bruv' });
         }
     });

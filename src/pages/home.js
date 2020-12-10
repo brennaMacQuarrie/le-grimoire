@@ -17,8 +17,10 @@ export default function Home({viewMenu, toggleMenu, me}) {
             });
             
         } catch (err) {
-            console.log(err);
+            console.log("cookie errorrr", err);
         }
+
+        window.location.reload(false);
     };
 
     return (

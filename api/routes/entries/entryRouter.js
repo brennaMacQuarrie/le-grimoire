@@ -46,14 +46,14 @@ router.route('/:id')
 .get(async (req, res) => {
     try {
         const { params } = req;
-        const note = await getEntryById(params.id); // TODO where does params come from?? 
+        const note = await getEntryById(params.id); 
         res.json({ data: note });
     } catch (err) {
         console.log(err);
         res.status(500).json({ message: 'internal server error' });
     }
 })
-// TODO is this post good?
+
 .post(async (req, res) => {
     try {
         const { body } = req;

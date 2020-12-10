@@ -346,6 +346,11 @@ button:active {
   text-shadow: 2px 2px 4px black;
 }
 
+.delete {
+  font-size: 0.9rem;
+  background: transparent;
+}
+
 .homePage,
 .entry {
   border: 1px solid white;
@@ -356,6 +361,7 @@ button:active {
   background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
+  background-position: center;
   font-size: 1.5rem;
 }
 
@@ -701,7 +707,6 @@ label {
   text-shadow: none;
 }
 
-/* Portrait tablet and small desktops */
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .menu.active {

@@ -13,20 +13,20 @@ export default function Field (props) {
         e.preventDefault();
         let payload = { title, publishedDate, text, bookmarked }
         payload['category'] = props.category;
+        
         try {
             const response = await fetch('http://localhost:3000/entries', {
-                headers: { "Content-Type": "application/json" },
+                headers: { 'Content-Type': 'application/json' },
                 method: 'POST',
                 body: JSON.stringify(payload)
             }).then((res) => {
+                document.getElementById('title').value = '';
+                document.getElementById('date').value = '';
+                document.getElementById('entry').value = '';
                 return res.json();
             }).then((res) => {
-                console.log("res", res);
+                console.log('res', res);
             });
-            // TODO reset all fields on submit
-            setTitle('');
-            setText('');
-            setPublishedDate('');
         } catch (e) {
             console.log(e);
         }

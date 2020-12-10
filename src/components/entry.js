@@ -16,6 +16,8 @@ export default function Entry({ title, publishedDate, category, text }) {
                     <h4>Subject: {category}</h4>
                 </div>
                 <p>{text}</p>
+                {/* TODO build delete functionality */}
+                <button className="delete">delete</button>
             </div>
         </div>
     )
