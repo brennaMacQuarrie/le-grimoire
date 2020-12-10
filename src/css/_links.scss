@@ -4,19 +4,25 @@
   font-size: 1.3rem;
   color: white;
   position: fixed;
-  right: 0;
-  top: 50%;
+  top: 0; right: 48%;
   opacity: 1;
   border: none;
+  box-shadow: none;
   background: transparent;
-  padding: 10px;
+  padding: 8px 20px;
   transition: all 0.8s;
   &:hover,
   &:focus {
-    transform: translateX(-10px);
+    transform: translateY(10px);
     background: transparent;
     color: white;
   }
+}
+
+// arrow down
+.reOpen.inactive {
+  opacity: 0; 
+  top: 28%;
 }
 
 a.button,
@@ -43,16 +49,16 @@ button {
 }
 
 .homeLink {
-  top: 10px;
-  right: 10px;
+  bottom: 10px; top: unset; 
+  right: 47%;
   font-size: 0.9rem;
   text-decoration: none;
-  padding: 5px 10px;
+  background: black;
   border: 1px rgba(255, 255, 255, 0.6) solid;
   &:hover,
   &:focus {
       color: black;
-      background-color: white;
+      background-color: $offWhite;
       transform: translateX(0px);
   }
 }

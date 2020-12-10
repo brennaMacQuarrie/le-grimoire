@@ -3,19 +3,18 @@
   width: 28%;
   height: 100vh;
   position: absolute;
-  top: 0; 
+  top: -45%; right: 50%;
+  transform: translate(50%,-50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: left;
+  text-align: center;
   transition: all 1s;  
   h2 {
     font-size: 1.4rem;
     padding: 4%;
     background: black;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-    border-left: 1px solid rgba(255, 255, 255, 0.7);
-    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.7);
   }
   .link {
     @include color($hoverText);
@@ -47,16 +46,12 @@
   }
 }
 .menu.active {
-  right: 0;
+  top: 0;
+  top: 45%; right: 50%;
+  transform: translate(50%,-50%);
 }
 
 .menu.inactive {
-  right: -500px;
   transition: all 1s;
 }
 
-// arrows
-.reOpen.inactive {
-  opacity: 0; 
-  right: 28%;
-}

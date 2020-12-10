@@ -256,12 +256,14 @@ body {
   font-size: 1.3rem;
   color: white;
   position: fixed;
-  right: 0;
-  top: 50%;
+  top: 0;
+  right: 48%;
   opacity: 1;
   border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background: transparent;
-  padding: 10px;
+  padding: 8px 20px;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
@@ -269,10 +271,15 @@ body {
 .homeLink:hover, .homeLink:focus,
 .reOpen:hover,
 .reOpen:focus {
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
   background: transparent;
   color: white;
+}
+
+.reOpen.inactive {
+  opacity: 0;
+  top: 28%;
 }
 
 a.button,
@@ -323,17 +330,18 @@ button:active {
 }
 
 .homeLink {
-  top: 10px;
-  right: 10px;
+  bottom: 10px;
+  top: unset;
+  right: 47%;
   font-size: 0.9rem;
   text-decoration: none;
-  padding: 5px 10px;
+  background: black;
   border: 1px rgba(255, 255, 255, 0.6) solid;
 }
 
 .homeLink:hover, .homeLink:focus {
   color: black;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.562);
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
 }
@@ -387,7 +395,10 @@ button:active {
   width: 28%;
   height: 100vh;
   position: absolute;
-  top: 0;
+  top: -45%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,7 +409,7 @@ button:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: left;
+  text-align: center;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -407,9 +418,7 @@ button:active {
   font-size: 1.4rem;
   padding: 4%;
   background: black;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-  border-left: 1px solid rgba(255, 255, 255, 0.7);
-  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .menu .link {
@@ -465,18 +474,16 @@ button:active {
 }
 
 .menu.active {
-  right: 0;
+  top: 0;
+  top: 45%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
 }
 
 .menu.inactive {
-  right: -500px;
   -webkit-transition: all 1s;
   transition: all 1s;
-}
-
-.reOpen.inactive {
-  opacity: 0;
-  right: 28%;
 }
 
 .content,
