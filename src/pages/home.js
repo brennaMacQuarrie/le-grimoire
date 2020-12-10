@@ -33,7 +33,7 @@ export default function Home({viewMenu, toggleMenu, me}) {
                     {
                         me ? (
                             <> 
-                                <button onClick={toggleMenu}>{viewMenu ? `Close` : `Make an Entry`}</button>
+                                <button onClick={toggleMenu}>Make an Entry</button>
                                 <button onClick={handleLogout} className="link signUp">Log Out</button>
                             </>
                             ) : 

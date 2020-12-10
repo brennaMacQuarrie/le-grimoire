@@ -57,7 +57,9 @@ export default function Sidebar(props) {
 
                     <button className="closeMenu link" onClick={props.toggleMenu}>Close Menu</button> 
                 </div>
-                ) : null
+                ) : (
+                    <button className="closeMenu link" onClick={props.toggleMenu}>Close Menu</button> 
+                )
                 }
             
         </nav> 

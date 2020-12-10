@@ -263,7 +263,7 @@ body {
   -webkit-box-shadow: none;
           box-shadow: none;
   background: transparent;
-  padding: 8px 20px;
+  padding: 7px 20px;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
@@ -304,7 +304,7 @@ button {
 a.button:hover, a.button:active,
 button:hover,
 button:active {
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   color: black;
   text-shadow: none;
 }
@@ -443,7 +443,7 @@ button:active {
 }
 
 .menu .link:hover, .menu .link:active {
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   color: black;
   text-shadow: none;
 }
@@ -599,7 +599,7 @@ button:active {
 }
 
 .submitDiv .submitButton:hover, .submitDiv .submitButton:active {
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   color: black;
   text-shadow: none;
 }
@@ -709,7 +709,7 @@ label {
 }
 
 .signupLogin form input[type=submit]:hover, .signupLogin form input[type=submit]:active {
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   color: black;
   text-shadow: none;
 }
