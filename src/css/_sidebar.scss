@@ -1,39 +1,39 @@
 
 .menu {
-  width: 28%;
   height: 100vh;
+  width: 610px;
   position: absolute;
-  top: -45%; right: 50%;
+  top: -50%; right: 50%;
   transform: translate(50%,-50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  transition: all 1s;  
+  transition: all 1.2s;  
+  background: black;
   h2 {
     font-size: 1.4rem;
-    padding: 4%;
-    background: black;
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    width: 70%;
+    padding: 3%;
+    align-self: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   }
   .link {
     @include color($hoverText);
     // replace some styles from the mixin
-    width: 90%;
+    width: 50%;
     padding: 3%;
     margin: 5px auto;
     text-decoration: none;
     background: black;
   }
-  // home & close menu
+  // home & close menu side by side
   .flex {
     display: flex;
     justify-content: space-between;
     padding: 0;
     border: none;
     box-shadow: none;
-    text-align: center;
-    background: transparent;
     &:hover,
     &:focus {
       background: transparent;
@@ -45,11 +45,12 @@
     }
   }
 }
+
+
 .menu.active {
-  top: 0;
-  top: 45%; right: 50%;
-  transform: translate(50%,-50%);
+  top: 50%;
 }
+
 
 .menu.inactive {
   transition: all 1s;

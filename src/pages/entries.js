@@ -23,13 +23,21 @@ export default function Entries() {
         getEntries();
     }, []);
 
+    // TODO build in delete 
+    async function removeEntry(entry) {
+        entries.pop(entry);
+    }
+
     return (
         <div className="entry" style={{ backgroundImage: "linear-gradient(black, rgba(0,0,0,0.3)), url(" + Background + ")" }}>
             <div className="entryPage">
                 <h2>Your Entries</h2>
                 {
                     entries.map(entry => {
-                        return <Entry key={entry._id} {...entry} />; 
+                        return <Entry 
+                            key={entry._id} 
+                            {...entry}  
+                            delete={removeEntry} />; 
                     })
                 }
             </div>

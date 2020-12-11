@@ -17,7 +17,10 @@ export default function Entry({ title, publishedDate, category, text }) {
                 </div>
                 <p>{text}</p>
                 {/* TODO build delete functionality */}
-                <button className="delete">delete</button>
+                <button 
+                    className="delete" 
+                    // onClick={props.delete}
+                >delete</button>
             </div>
         </div>
     )
