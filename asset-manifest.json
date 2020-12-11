@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/le-grimoire/static/css/main.4bb587b2.chunk.css",
-    "main.js": "/le-grimoire/static/js/main.6926b2cc.chunk.js",
-    "main.js.map": "/le-grimoire/static/js/main.6926b2cc.chunk.js.map",
+    "main.css": "/le-grimoire/static/css/main.04ed4171.chunk.css",
+    "main.js": "/le-grimoire/static/js/main.196d3561.chunk.js",
+    "main.js.map": "/le-grimoire/static/js/main.196d3561.chunk.js.map",
     "runtime-main.js": "/le-grimoire/static/js/runtime-main.5c2a1f05.js",
     "runtime-main.js.map": "/le-grimoire/static/js/runtime-main.5c2a1f05.js.map",
-    "static/js/2.b672786d.chunk.js": "/le-grimoire/static/js/2.b672786d.chunk.js",
-    "static/js/2.b672786d.chunk.js.map": "/le-grimoire/static/js/2.b672786d.chunk.js.map",
+    "static/js/2.13527ad0.chunk.js": "/le-grimoire/static/js/2.13527ad0.chunk.js",
+    "static/js/2.13527ad0.chunk.js.map": "/le-grimoire/static/js/2.13527ad0.chunk.js.map",
     "static/js/3.3e5a7f5e.chunk.js": "/le-grimoire/static/js/3.3e5a7f5e.chunk.js",
     "static/js/3.3e5a7f5e.chunk.js.map": "/le-grimoire/static/js/3.3e5a7f5e.chunk.js.map",
     "index.html": "/le-grimoire/index.html",
-    "static/css/main.4bb587b2.chunk.css.map": "/le-grimoire/static/css/main.4bb587b2.chunk.css.map",
-    "static/js/2.b672786d.chunk.js.LICENSE.txt": "/le-grimoire/static/js/2.b672786d.chunk.js.LICENSE.txt",
+    "static/css/main.04ed4171.chunk.css.map": "/le-grimoire/static/css/main.04ed4171.chunk.css.map",
+    "static/js/2.13527ad0.chunk.js.LICENSE.txt": "/le-grimoire/static/js/2.13527ad0.chunk.js.LICENSE.txt",
     "static/media/Feb26_BloomGeneration-2322.c582a0e5.jpg": "/le-grimoire/static/media/Feb26_BloomGeneration-2322.c582a0e5.jpg",
     "static/media/styles.css": "/le-grimoire/static/media/SweetSans-Light.61e3c6ef.ttf",
     "static/media/background_flowers2.1f5f8cd9.jpg": "/le-grimoire/static/media/background_flowers2.1f5f8cd9.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.5c2a1f05.js",
-    "static/js/2.b672786d.chunk.js",
-    "static/css/main.4bb587b2.chunk.css",
-    "static/js/main.6926b2cc.chunk.js"
+    "static/js/2.13527ad0.chunk.js",
+    "static/css/main.04ed4171.chunk.css",
+    "static/js/main.196d3561.chunk.js"
   ]
 }
