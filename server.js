@@ -4,24 +4,15 @@ const express = require('express');
 const entryRouter = require('./api/routes//entries/entryRouter');
 const userRouter = require('./api/routes/users/userRouter');
 const app = express();
-// bring in mongoose
 const mongoose = require('mongoose');
+
 // TODO update on deploy to no longer be local
-// database
-const uri = "mongodb://localhost:27017/legrimoire";
+const DB_URL = process.env.DB_URL || "mongodb://localhost:27017/legrimoire";
+const PORT = process.env.PORT || "8080";
+
+
 const cookieParser = require('cookie-parser');
 
-
-// Connect to database
-mongoose
-    // .connect returns a promise so we can "then" it
-    .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log(`Successfully connected to: ${uri} `);
-    })
-    .catch(err => {
-        console.log(err.message);
-})
 
 app.use(express.json());
 app.use(cookieParser());
@@ -30,10 +21,24 @@ app.use('/entries', entryRouter);
 app.use('/users', userRouter);
 
 
-// express
-// frontend
-const PORT = 5000;
+// server.js at the very end of the file.
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('./build'));
+    // only if you are using React Router
+    app.get('*', (req, res) => {
+        console.log(path.join(__dirname + '/build/index.html'));
+        res.sendFile(path.join(__dirname + '/build/index.html'));
+    });
+}
 
-app.listen(PORT, () => {
-    console.log('app is running on 5k');
-})
+mongoose
+    .connect(DB_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`server is running on port ${PORT}`);
+        });
+    })
+    .catch((err) => console.log(err));
