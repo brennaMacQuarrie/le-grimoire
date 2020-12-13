@@ -23,9 +23,26 @@ export default function Entries() {
         getEntries();
     }, []);
 
+
+
     // TODO build in delete 
-    async function removeEntry(entry) {
-        entries.pop(entry);
+    async function deleteEntry(id) {
+        console.log(id);
+        try {
+            const response = await fetch(`http://localhost:3000/entries/delete`, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({id})
+            });
+
+            const json = await response.json();
+            console.log(json);
+            setEntries(json.data);
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return (
@@ -37,7 +54,8 @@ export default function Entries() {
                         return <Entry 
                             key={entry._id} 
                             {...entry}  
-                            delete={removeEntry} />; 
+                            deleteEntry={() => deleteEntry(entry._id)}
+                         />; 
                     })
                 }
             </div>

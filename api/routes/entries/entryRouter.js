@@ -1,7 +1,8 @@
 const express = require('express');
 const { verifyToken } = require('../../middleware/verifyToken');
-const { getEntriesByUser, getEntryById, createEntry, updateEntryById } = require('./entryController');
+const { getEntriesByUser, getEntryById, createEntry, updateEntryById, deleteEntry } = require('./entryController');
 const router = express.Router();
+
 router.use(verifyToken);
 
 const Entry = require('./Entry');
@@ -40,6 +41,22 @@ router.route('/')
         res.status(500).json({ message: 'internal server error' });
     }
 });
+
+
+
+router.route('/delete')
+    .post(async (req, res) => {
+        console.log(req.body, 'WHATSUP');
+
+        try {
+            const entries = await deleteEntry(req.body.id, req.user.id);
+            res.json({data: entries});
+        } catch (err) {
+            console.log(err);
+        }
+    });
+
+
 
 
 router.route('/:id')
@@ -90,6 +107,8 @@ router.route('/:id')
         res.status(500).json({ message: 'internal server error' });
     }
 })
+
+
 
 
 

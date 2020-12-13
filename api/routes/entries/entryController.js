@@ -1,4 +1,6 @@
+const mongoose = require('mongoose');
 const Entries = require('./Entry');
+
 
 exports.getEntriesByUser = async (userId) => {
     try {
@@ -43,5 +45,16 @@ exports.updateEntryById = async (entry) => {
         return savedEntry;
     } catch(err) {
         throw err;
+    }
+}
+
+exports.deleteEntry = async (id, userId) => {
+    try {
+        const entry = await Entries.deleteOne({ _id: mongoose.Types.ObjectId(id) });
+        console.log(entry);
+        const entries = await exports.getEntriesByUser(userId);
+        return entries;
+    } catch(err) {
+        console.log(err);
     }
 }
