@@ -7,7 +7,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 // TODO update on deploy to no longer be local
-const DB_URL = process.env.DB_URL || "mongodb://localhost:27017/legrimoire";
+const DB_URI = process.env.DB_URI || "mongodb://localhost:27017/legrimoire";
 const PORT = process.env.PORT || "8080";
 
 
@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 mongoose
-    .connect(DB_URL, {
+    .connect(DB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
