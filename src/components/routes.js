@@ -6,7 +6,7 @@ import Tarot from '../pages/tarot';
 import Crystals from '../pages/crystals'; 
 import Rituals from '../pages/rituals';
 import Spells from '../pages/spells';
-import Herbs from '../pages/herbs';
+import Herbs from '../pages/herbs';  
 import Entries from '../pages/entries';
 import LogIn from '../pages/logIn';
 import SignUp from '../pages/signUp';
