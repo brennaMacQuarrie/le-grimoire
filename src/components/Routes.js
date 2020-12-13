@@ -1,6 +1,6 @@
 import { Redirect, Route, Switch } from 'react-router';
 import Home from '../pages/home';
-import Astro from '../pages/Astro';
+import Astro from '../pages/astro';
 import Symbols from '../pages/symbols';
 import Tarot from '../pages/tarot';
 import Crystals from '../pages/crystals';
