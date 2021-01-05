@@ -15,7 +15,7 @@ export default function SignUp(props) {
                 name
             };
             // create the user
-            const response = await fetch('http://localhost:3000/users', {
+            const response = await fetch('/users', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ export default function SignUp(props) {
                 throw new Error(data.message); 
             }
             // log them in
-            const loginResponse = await fetch('http://localhost:3000/users/login', {
+            const loginResponse = await fetch('/users/login', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

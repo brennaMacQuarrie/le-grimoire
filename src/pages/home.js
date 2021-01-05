@@ -9,7 +9,7 @@ export default function Home({viewMenu, toggleMenu, me}) {
     const handleLogout = async (e) => {
         try {
             e.preventDefault();
-            const response = await fetch('http://localhost:3000/users/logout', {
+            const response = await fetch('/users/logout', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

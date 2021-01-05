@@ -8,7 +8,7 @@ export default function LogIn(props) {
     const handleSubmit = async (e) => {
         try {
             e.preventDefault();
-            const response = await fetch('http://localhost:3000/users/login', {
+            const response = await fetch('/users/login', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

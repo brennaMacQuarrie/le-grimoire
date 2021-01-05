@@ -19,7 +19,7 @@ export default function App() {
 
   const getUser = useCallback(async function() {
     try {
-      const response = await fetch('http://localhost:3000/users/me');
+      const response = await fetch('/users/me'); //TODO
       const json = await response.json();
       if (!response.ok) {
         throw new Error(json.message);

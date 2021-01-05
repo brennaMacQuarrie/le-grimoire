@@ -15,7 +15,7 @@ export default function Field (props) {
         payload['category'] = props.category;
         
         try {
-            const response = await fetch('http://localhost:3000/entries', {
+            const response = await fetch('/entries', {
                 headers: { 'Content-Type': 'application/json' },
                 method: 'POST',
                 body: JSON.stringify(payload)

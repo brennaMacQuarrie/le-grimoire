@@ -10,7 +10,7 @@ export default function Entries() {
 
     async function getEntries() {
         try {
-            const response = await fetch('http://localhost:3000/entries');
+            const response = await fetch('/entries');
 
             const json = await response.json();
             setEntries(json.data);
@@ -29,7 +29,7 @@ export default function Entries() {
     async function deleteEntry(id) {
         console.log(id);
         try {
-            const response = await fetch(`http://localhost:3000/entries/delete`, {
+            const response = await fetch(`/entries/delete`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
