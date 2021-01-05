@@ -8,11 +8,7 @@ const router = express.Router();
 // import User mongoose model (schema?)
 const User = require('./User'); 
 
-
-
-// TODO to use in the 'entries'?? do i need this?
 const Entry = require('../entries/Entry');
-
 
 
 router.route('/')

@@ -4,7 +4,7 @@ import Background from '../assets/background_flowers2.jpg';
 import Entry from '../components/entry';
 
 
-export default function Entries() {
+export default function Entries({ toggleMenu }) {
 
     const [entries, setEntries] = useState([]);
 
@@ -58,6 +58,7 @@ export default function Entries() {
                          />; 
                     })
                 }
+                <button onClick={toggleMenu}>Make an Entry</button>
             </div>
         </div>
     )

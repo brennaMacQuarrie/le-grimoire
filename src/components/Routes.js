@@ -37,7 +37,7 @@ export default function Routes(props) {
                 render={() => <Herbs />}
             />
             <Route path="/entries"
-                render={() => <Entries />}
+                render={() => <Entries toggleMenu={props.toggleMenu} />}
             />
             {/* >>>>>>>>>>>>>.NEW CODE >>>>>>>>>>>>>>>> */}
             <Route path="/signUp" render={props => {

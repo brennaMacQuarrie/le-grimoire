@@ -30,7 +30,7 @@ export default function LogIn(props) {
         <div className="entry" style={{ backgroundImage: "linear-gradient(black, rgba(0,0,0,0.3)), url(" + Background + ")" }}>
             <div className="entryBubble signupLogin">
                 <h2>LogIn</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     
                     <div className="col">
                         <label htmlFor="email">Email Address</label>
